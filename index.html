@@ -1,85 +1,170 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl" class="transition-colors duration-500">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>المتجر الخشبي</title>
+  <title>موقعي الشخصي</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     body {
-      font-family: 'Tajawal', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-      direction: rtl;
-      text-align: center;
+      font-family: 'Inter', sans-serif;
+      transition: background-color 0.6s ease, color 0.6s ease;
     }
-    header {
-      background: #8d4a25;
-      color: white;
-      padding: 15px;
+    header, section, footer, nav, div, a, p, h1, h2, h3, h4 {
+      transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
     }
-    header h1 {
-      margin: 0;
+    .rotate-scale {
+      animation: rotateScale 0.6s ease forwards;
     }
-    nav a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .hero {
-      padding: 50px 20px;
-      background: url('img/wood-bg.jpg') center/cover no-repeat;
-      color: white;
-    }
-    .hero h2 {
-      font-size: 32px;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #8d4a25;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-    .btn:hover {
-      background: #6d3518;
-    }
-    footer {
-      background: #eee;
-      padding: 20px;
-      margin-top: 30px;
+    @keyframes rotateScale {
+      0%   { transform: rotate(0deg) scale(1); }
+      50%  { transform: rotate(180deg) scale(1.3); }
+      100% { transform: rotate(360deg) scale(1); }
     }
   </style>
 </head>
-<body>
-  <header>
-    <h1>✨ المتجر الخشبي ✨</h1>
-    <img src="images/products/wall.jpg" alt="منتج" width="300">
-    <nav>
-      <a href="index.html">الرئيسية</a>
-      <a href="products.html">المنتجات</a>
-      <a href="#contact">تواصل</a>
-    </nav>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Navigation -->
+  <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur shadow z-50" data-aos="fade-down">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      
+      <!-- Logo -->
+      <a href="#">
+        <img src="images/products/wall.jpg" alt="شعار الموقع" class="h-12 w-auto rounded-full shadow-lg transition duration-500">
+      </a>
+      
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-6 space-x-reverse">
+        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">عنّي</a>
+        <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400">خدماتي</a>
+        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">مشاريعي</a>
+        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">تواصل</a>
+      </nav>
+
+      <!-- Right side buttons -->
+      <div class="flex items-center space-x-4 space-x-reverse">
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle" 
+          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-110 transition duration-500 transform">
+          🌙
+        </button>
+        <!-- Call to action -->
+        <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-700 transition">ابدأ الآن</a>
+      </div>
+    </div>
   </header>
 
-  <section class="hero">
-    <h2>ديكورات خشبية يدوية بجودة عالية</h2>
-    <p>رفوف – حامل مفاتيح – ديكورات جدارية</p>
-    <a href="products.html" class="btn">استعرض المنتجات</a>
+  <!-- Hero -->
+  <section class="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-r from-blue-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
+    <div data-aos="zoom-in">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">أهلاً بك في عالمي</h2>
+      <p class="text-lg md:text-xl mb-6 text-gray-600 dark:text-gray-300">أنا مطوّر مواقع أقدّم حلول عصرية واحترافية لمشروعك.</p>
+      <a href="#services" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">استكشف المزيد</a>
+    </div>
   </section>
 
-  <footer id="contact">
-    <h3>📩 تواصل معنا</h3>
-    <p>للطلبات والاستفسارات عبر واتساب:</p>
-    <a href="https://wa.me/201234567890" class="btn">تواصل الآن</a>
+  <!-- Services -->
+  <section id="services" class="py-20 max-w-7xl mx-auto px-6 transition-colors duration-500">
+    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">خدماتي</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in">
+        <div class="text-blue-600 text-4xl mb-4">💻</div>
+        <h4 class="text-xl font-semibold mb-2">تصميم مواقع</h4>
+        <p class="text-gray-600 dark:text-gray-300">تصاميم عصرية متجاوبة وسهلة الاستخدام.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-blue-600 text-4xl mb-4">⚡</div>
+        <h4 class="text-xl font-semibold mb-2">تطوير سريع</h4>
+        <p class="text-gray-600 dark:text-gray-300">أكواد نظيفة وسريعة التحميل باستخدام أحدث التقنيات.</p>
+      </div>
+      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-blue-600 text-4xl mb-4">📱</div>
+        <h4 class="text-xl font-semibold mb-2">تطبيقات متجاوبة</h4>
+        <p class="text-gray-600 dark:text-gray-300">تجربة مستخدم متكاملة على جميع الأجهزة.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">مشاريعي</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up">
+          <img src="https://via.placeholder.com/400x250" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="font-semibold mb-2">مشروع 1</h4>
+            <p class="text-gray-600 dark:text-gray-300">وصف قصير عن المشروع.</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://via.placeholder.com/400x250" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="font-semibold mb-2">مشروع 2</h4>
+            <p class="text-gray-600 dark:text-gray-300">وصف قصير عن المشروع.</p>
+          </div>
+        </div>
+        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://via.placeholder.com/400x250" alt="Project" class="w-full">
+          <div class="p-6">
+            <h4 class="font-semibold mb-2">مشروع 3</h4>
+            <p class="text-gray-600 dark:text-gray-300">وصف قصير عن المشروع.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto px-6 text-center transition-colors duration-500">
+    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">تواصل معي</h3>
+    <p class="mb-8 text-gray-600 dark:text-gray-300" data-aos="fade-up" data-aos-delay="200">هل لديك فكرة مشروع؟ تواصل معي عبر البريد أو الواتساب.</p>
+    <div class="flex justify-center space-x-6 space-x-reverse">
+      <a href="mailto:example@email.com" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition" data-aos="zoom-in">📧 بريد إلكتروني</a>
+      <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-xl shadow hover:bg-green-600 transition" data-aos="zoom-in" data-aos-delay="200">💬 واتساب</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 dark:bg-black text-gray-300 py-6 text-center transition-colors duration-500" data-aos="fade-up">
+    <p>© 2025 جميع الحقوق محفوظة | موقعي الشخصي</p>
   </footer>
+
+  <!-- AOS Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000, once: true });
+
+    const toggleBtn = document.getElementById("darkModeToggle");
+
+    // عند تحميل الصفحة: تحقق من التفضيل
+    if (localStorage.getItem("theme") === "dark") {
+      document.documentElement.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    } else {
+      document.documentElement.classList.remove("dark");
+      toggleBtn.textContent = "🌙";
+    }
+
+    // عند الضغط على الزر
+    toggleBtn.addEventListener("click", () => {
+      document.documentElement.classList.toggle("dark");
+
+      // إضافة الأنيميشن
+      toggleBtn.classList.add("rotate-scale");
+      setTimeout(() => toggleBtn.classList.remove("rotate-scale"), 600);
+
+      if (document.documentElement.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        toggleBtn.textContent = "☀️";
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleBtn.textContent = "🌙";
+      }
+    });
+  </script>
 </body>
 </html>
