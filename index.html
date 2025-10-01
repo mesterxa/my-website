@@ -2,10 +2,125 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>موقعي الأول</title>
+  <title>متجر دولة السعادة 🛍️</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      direction: rtl;
+      background: #f4f4f9;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #27ae60;
+      color: white;
+      padding: 20px;
+      font-size: 24px;
+    }
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px;
+    }
+    .product {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin: 15px;
+      padding: 20px;
+      width: 220px;
+    }
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .product h3 {
+      margin: 10px 0;
+      font-size: 20px;
+    }
+    .product p {
+      color: #555;
+      font-size: 18px;
+    }
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: #27ae60;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #219150;
+    }
+    #cart {
+      background: #fff3cd;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      font-size: 18px;
+    }
+  </style>
 </head>
 <body>
-  <h1>مرحبا بك في موقعي الأول 🚀</h1>
-  <p>تم إنشاؤه باستخدام Termux و GitHub.</p>
+
+  <header>🛍️ متجر دولة السعادة - رمضان كريم 🌙</header>
+
+  <div class="products">
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="منتج 1">
+      <h3>تمر فاخر</h3>
+      <p>السعر: 30 ريال</p>
+      <button onclick="addToCart('تمر فاخر', 30)">إضافة للسلة</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="منتج 2">
+      <h3>عسل طبيعي</h3>
+      <p>السعر: 50 ريال</p>
+      <button onclick="addToCart('عسل طبيعي', 50)">إضافة للسلة</button>
+    </div>
+
+    <div class="product">
+      <img src="https://via.placeholder.com/200" alt="منتج 3">
+      <h3>ماء زمزم</h3>
+      <p>السعر: 20 ريال</p>
+      <button onclick="addToCart('ماء زمزم', 20)">إضافة للسلة</button>
+    </div>
+  </div>
+
+  <div id="cart">
+    🛒 السلة فارغة
+  </div>
+
+  <script>
+    let cart = [];
+
+    function addToCart(product, price) {
+      cart.push({ product, price });
+      displayCart();
+    }
+
+    function displayCart() {
+      if (cart.length === 0) {
+        document.getElementById("cart").innerHTML = "🛒 السلة فارغة";
+      } else {
+        let content = "<h3>🛒 محتويات السلة:</h3><ul>";
+        let total = 0;
+        cart.forEach(item => {
+          content += `<li>${item.product} - ${item.price} ريال</li>`;
+          total += item.price;
+        });
+        content += `</ul><p>الإجمالي: ${total} ريال</p>`;
+        document.getElementById("cart").innerHTML = content;
+      }
+    }
+  </script>
+
 </body>
 </html>
