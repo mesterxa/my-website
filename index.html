@@ -1,46 +1,140 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>موقعي العصري</title>
+  <title>الفنيات الخشبية</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Cairo', sans-serif; }
+    .fade-bg {
+      background: linear-gradient(135deg, #a16207, #713f12, #b45309);
+      background-size: 300% 300%;
+      animation: gradientBG 8s ease infinite;
+    }
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+  </style>
 </head>
-<body class="bg-gray-100 font-sans">
-  <!-- الهيرو -->
-  <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url(https://source.unsplash.com/1600x900/?technology,code);">
-    <div class="bg-black bg-opacity-50 p-10 rounded-2xl text-white" data-aos="zoom-in">
-      <h1 class="text-5xl font-bold mb-4">مرحباً بك في موقعي</h1>
-      <p class="text-lg mb-6">موقع عصري بسيط و جميل</p>
-      <a href="#cards" class="px-6 py-3 bg-blue-600 hover:bg-blue-800 rounded-xl">ابدأ</a>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
+      <h1 class="text-2xl font-bold text-amber-700">🪵 الفنيات الخشبية</h1>
+      <nav class="hidden md:flex gap-6">
+        <a href="#hero" class="hover:text-amber-700">الرئيسية</a>
+        <a href="#products" class="hover:text-amber-700">المنتجات</a>
+        <a href="#order" class="hover:text-amber-700">اطلب الآن</a>
+        <a href="#contact" class="hover:text-amber-700">اتصل بنا</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen fade-bg flex items-center justify-center text-center text-white px-6">
+    <div data-aos="zoom-in" class="space-y-6">
+      <h2 class="text-5xl md:text-7xl font-extrabold drop-shadow-lg">جمال الخشب العصري</h2>
+      <p class="text-xl md:text-2xl">أثاث يدوي ✦ تحف فنية ✦ جودة عالية</p>
+      <a href="#products" class="bg-white text-amber-800 px-6 py-3 rounded-xl shadow-lg font-bold hover:bg-gray-200 transition">استكشف منتجاتنا</a>
     </div>
   </section>
 
-  <!-- الكروت -->
-  <section id="cards" class="py-20 px-6 bg-white">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up">
-        <h2 class="text-2xl font-bold mb-4">خدمة ١</h2>
-        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
+  <!-- Products -->
+  <section id="products" class="py-20 max-w-7xl mx-auto px-6">
+    <h3 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up">
+        <img src="images/products/wall.jpg" alt="علاقة مفاتيح" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">علاقة مفاتيح عصرية</h4>
+          <p class="text-gray-600">قطعة عملية بأناقة الخشب.</p>
+        </div>
       </div>
-      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
-        <h2 class="text-2xl font-bold mb-4">خدمة ٢</h2>
-        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="150">
+        <img src="images/products/clothes.jpg" alt="علاقة ملابس" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">علاقة ملابس عصرية</h4>
+          <p class="text-gray-600">تصميم متين وجذاب.</p>
+        </div>
       </div>
-      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
-        <h2 class="text-2xl font-bold mb-4">خدمة ٣</h2>
-        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
+      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/products/kitchen.jpg" alt="ادوات مطبخ" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h4 class="text-xl font-semibold mb-2">أدوات مطبخ خشبية</h4>
+          <p class="text-gray-600">لمسة طبيعية في مطبخك.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- الفوتر -->
-  <footer class="bg-gray-900 text-gray-300 text-center py-6" data-aos="fade-up">
-    <p>© 2025 جميع الحقوق محفوظة</p>
+  <!-- Order Form -->
+  <section id="order" class="py-20 bg-gray-100">
+    <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">اطلب الآن</h3>
+    <form class="max-w-3xl mx-auto bg-white shadow-lg p-8 rounded-2xl space-y-6" data-aos="zoom-in">
+      <div>
+        <label class="font-semibold">اختر المنتج</label>
+        <select class="w-full p-3 border rounded-lg">
+          <option>علاقة مفاتيح عصرية</option>
+          <option>علاقة ملابس عصرية</option>
+          <option>أدوات مطبخ</option>
+        </select>
+      </div>
+      <div>
+        <label class="font-semibold">العدد</label>
+        <input type="number" min="1" value="1" class="w-full p-3 border rounded-lg">
+      </div>
+      <div>
+        <label class="font-semibold">الاسم واللقب</label>
+        <input type="text" class="w-full p-3 border rounded-lg" required>
+      </div>
+      <div>
+        <label class="font-semibold">رقم الهاتف</label>
+        <input type="tel" class="w-full p-3 border rounded-lg" required>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <label class="font-semibold">الولاية</label>
+          <select class="w-full p-3 border rounded-lg">
+            <option>الجزائر</option>
+            <option>وهران</option>
+            <option>سطيف</option>
+            <option>قسنطينة</option>
+          </select>
+        </div>
+        <div>
+          <label class="font-semibold">البلدية</label>
+          <input type="text" class="w-full p-3 border rounded-lg">
+        </div>
+      </div>
+      <div>
+        <label class="font-semibold">العنوان</label>
+        <textarea class="w-full p-3 border rounded-lg"></textarea>
+      </div>
+      <button class="w-full py-3 bg-amber-700 text-white rounded-lg font-bold hover:bg-amber-800 transition">إرسال الطلب</button>
+    </form>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-amber-900 text-white text-center">
+    <h3 class="text-3xl font-bold mb-6">تواصل معنا</h3>
+    <p class="mb-6">نسعد بخدمتكم عبر البريد أو الواتساب</p>
+    <div class="flex justify-center gap-6">
+      <a href="mailto:aymenmed25071999@gmail.com" class="bg-white text-amber-800 px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">📧 بريد</a>
+      <a href="https://wa.me/213656687281" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition">💬 واتساب</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
+    <p>© 2025 جميع الحقوق محفوظة | الفنيات الخشبية</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init();</script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
