@@ -1,140 +1,100 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl" class="scroll-smooth">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الفنيات الخشبية</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <style>
-    body { font-family: 'Cairo', sans-serif; }
-    .fade-bg {
-      background: linear-gradient(135deg, #a16207, #713f12, #b45309);
-      background-size: 300% 300%;
-      animation: gradientBG 8s ease infinite;
-    }
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-  </style>
-</head>
-<body class="bg-gray-50 text-gray-800">
+<!DOCTYPE html> <!-- 1 -->
+<html lang="ar" dir="rtl"> <!-- 2 -->
+<head> <!-- 3 -->
+  <meta charset="UTF-8"> <!-- 4 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 5 -->
+  <title>الفنيات الخشبية</title> <!-- 6 -->
+  <script src="https://cdn.tailwindcss.com"></script> <!-- 7 -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet"> <!-- 8 -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" /> <!-- 9 -->
+  <style> <!-- 10 -->
+    body { font-family: 'Cairo', sans-serif; } <!-- 11 -->
+  </style> <!-- 12 -->
+</head> <!-- 13 -->
 
-  <!-- Navbar -->
-  <header class="fixed top-0 w-full bg-white/80 backdrop-blur-md shadow z-50">
-    <div class="max-w-7xl mx-auto flex justify-between items-center p-4">
-      <h1 class="text-2xl font-bold text-amber-700">🪵 الفنيات الخشبية</h1>
-      <nav class="hidden md:flex gap-6">
-        <a href="#hero" class="hover:text-amber-700">الرئيسية</a>
-        <a href="#products" class="hover:text-amber-700">المنتجات</a>
-        <a href="#order" class="hover:text-amber-700">اطلب الآن</a>
-        <a href="#contact" class="hover:text-amber-700">اتصل بنا</a>
-      </nav>
-    </div>
-  </header>
+<body class="bg-gray-50 text-gray-900"> <!-- 14 -->
 
-  <!-- Hero Section -->
-  <section id="hero" class="h-screen fade-bg flex items-center justify-center text-center text-white px-6">
-    <div data-aos="zoom-in" class="space-y-6">
-      <h2 class="text-5xl md:text-7xl font-extrabold drop-shadow-lg">جمال الخشب العصري</h2>
-      <p class="text-xl md:text-2xl">أثاث يدوي ✦ تحف فنية ✦ جودة عالية</p>
-      <a href="#products" class="bg-white text-amber-800 px-6 py-3 rounded-xl shadow-lg font-bold hover:bg-gray-200 transition">استكشف منتجاتنا</a>
-    </div>
-  </section>
+  <!-- الهيدر --> <!-- 15 -->
+  <header class="fixed top-0 w-full bg-white shadow z-50"> <!-- 16 -->
+    <div class="max-w-7xl mx-auto flex justify-between items-center p-4"> <!-- 17 -->
+      <a href="#"> <!-- 18 -->
+        <img src="images/products/wall.jpg" alt="شعار" class="h-12 w-auto rounded-full shadow"> <!-- 19 -->
+      </a> <!-- 20 -->
+      <nav class="hidden md:flex space-x-6 space-x-reverse"> <!-- 21 -->
+        <a href="#products" class="hover:text-amber-600">المنتجات</a> <!-- 22 -->
+        <a href="#about" class="hover:text-amber-600">عنّا</a> <!-- 23 -->
+        <a href="#contact" class="hover:text-amber-600">تواصل معنا</a> <!-- 24 -->
+      </nav> <!-- 25 -->
+    </div> <!-- 26 -->
+  </header> <!-- 27 -->
 
-  <!-- Products -->
-  <section id="products" class="py-20 max-w-7xl mx-auto px-6">
-    <h3 class="text-4xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up">
-        <img src="images/products/wall.jpg" alt="علاقة مفاتيح" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">علاقة مفاتيح عصرية</h4>
-          <p class="text-gray-600">قطعة عملية بأناقة الخشب.</p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="150">
-        <img src="images/products/clothes.jpg" alt="علاقة ملابس" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">علاقة ملابس عصرية</h4>
-          <p class="text-gray-600">تصميم متين وجذاب.</p>
-        </div>
-      </div>
-      <div class="bg-white rounded-2xl shadow hover:shadow-xl overflow-hidden transform hover:-translate-y-2 transition" data-aos="fade-up" data-aos-delay="300">
-        <img src="images/products/kitchen.jpg" alt="ادوات مطبخ" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h4 class="text-xl font-semibold mb-2">أدوات مطبخ خشبية</h4>
-          <p class="text-gray-600">لمسة طبيعية في مطبخك.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- البانر الرئيسي --> <!-- 28 -->
+  <section class="h-screen flex items-center justify-center bg-gradient-to-r from-amber-100 to-amber-50 pt-20"> <!-- 29 -->
+    <div class="text-center" data-aos="zoom-in"> <!-- 30 -->
+      <h1 class="text-5xl font-bold mb-4 text-amber-800">الفنيات الخشبية</h1> <!-- 31 -->
+      <p class="text-lg mb-6 text-gray-600">منتجات خشبية عصرية وأنيقة لبيتك</p> <!-- 32 -->
+      <a href="#products" class="bg-amber-700 text-white px-6 py-3 rounded-lg shadow hover:bg-amber-800 transition">تسوق الآن</a> <!-- 33 -->
+    </div> <!-- 34 -->
+  </section> <!-- 35 -->
 
-  <!-- Order Form -->
-  <section id="order" class="py-20 bg-gray-100">
-    <h3 class="text-3xl font-bold text-center mb-10" data-aos="fade-up">اطلب الآن</h3>
-    <form class="max-w-3xl mx-auto bg-white shadow-lg p-8 rounded-2xl space-y-6" data-aos="zoom-in">
-      <div>
-        <label class="font-semibold">اختر المنتج</label>
-        <select class="w-full p-3 border rounded-lg">
-          <option>علاقة مفاتيح عصرية</option>
-          <option>علاقة ملابس عصرية</option>
-          <option>أدوات مطبخ</option>
-        </select>
-      </div>
-      <div>
-        <label class="font-semibold">العدد</label>
-        <input type="number" min="1" value="1" class="w-full p-3 border rounded-lg">
-      </div>
-      <div>
-        <label class="font-semibold">الاسم واللقب</label>
-        <input type="text" class="w-full p-3 border rounded-lg" required>
-      </div>
-      <div>
-        <label class="font-semibold">رقم الهاتف</label>
-        <input type="tel" class="w-full p-3 border rounded-lg" required>
-      </div>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div>
-          <label class="font-semibold">الولاية</label>
-          <select class="w-full p-3 border rounded-lg">
-            <option>الجزائر</option>
-            <option>وهران</option>
-            <option>سطيف</option>
-            <option>قسنطينة</option>
-          </select>
-        </div>
-        <div>
-          <label class="font-semibold">البلدية</label>
-          <input type="text" class="w-full p-3 border rounded-lg">
-        </div>
-      </div>
-      <div>
-        <label class="font-semibold">العنوان</label>
-        <textarea class="w-full p-3 border rounded-lg"></textarea>
-      </div>
-      <button class="w-full py-3 bg-amber-700 text-white rounded-lg font-bold hover:bg-amber-800 transition">إرسال الطلب</button>
-    </form>
-  </section>
+  <!-- قسم المنتجات --> <!-- 36 -->
+  <section id="products" class="py-20 max-w-7xl mx-auto px-6"> <!-- 37 -->
+    <h2 class="text-3xl font-bold text-center mb-12">منتجاتنا</h2> <!-- 38 -->
+    <div class="grid md:grid-cols-3 gap-8"> <!-- 39 -->
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 bg-amber-900 text-white text-center">
-    <h3 class="text-3xl font-bold mb-6">تواصل معنا</h3>
-    <p class="mb-6">نسعد بخدمتكم عبر البريد أو الواتساب</p>
-    <div class="flex justify-center gap-6">
-      <a href="mailto:aymenmed25071999@gmail.com" class="bg-white text-amber-800 px-6 py-3 rounded-lg shadow hover:bg-gray-200 transition">📧 بريد</a>
-      <a href="https://wa.me/213656687281" target="_blank" class="bg-green-600 text-white px-6 py-3 rounded-lg shadow hover:bg-green-700 transition">💬 واتساب</a>
-    </div>
-  </section>
+      <!-- منتج 1 --> <!-- 40 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6" data-aos="fade-up"> <!-- 41 -->
+        <img src="images/products/key-holder.jpg" alt="علاقة مفاتيح" class="rounded-lg mb-4"> <!-- 42 -->
+        <h3 class="text-xl font-semibold mb-2">علاقة مفاتيح عصرية</h3> <!-- 43 -->
+        <p class="text-gray-600 mb-4">تصميم أنيق للحفاظ على مفاتيحك.</p> <!-- 44 -->
+        <a href="#contact" class="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700">اطلب الآن</a> <!-- 45 -->
+      </div> <!-- 46 -->
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-gray-400 py-6 text-center">
-    <p>© 2025 جميع الحقوق محفوظة | الفنيات الخشبية</p>
-  </footer>
+      <!-- منتج 2 --> <!-- 47 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6" data-aos="fade-up" data-aos-delay="200"> <!-- 48 -->
+        <img src="images/products/clothes-holder.jpg" alt="علاقة ملابس" class="rounded-lg mb-4"> <!-- 49 -->
+        <h3 class="text-xl font-semibold mb-2">علاقة ملابس عصرية</h3> <!-- 50 -->
+        <p class="text-gray-600 mb-4">إضافة أنيقة لغرفة نومك.</p> <!-- 51 -->
+        <a href="#contact" class="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700">اطلب الآن</a> <!-- 52 -->
+      </div> <!-- 53 -->
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>AOS.init({ duration: 1000, once: true });</script>
-</body>
-</html>
+      <!-- منتج 3 --> <!-- 54 -->
+      <div class="bg-white rounded-2xl shadow hover:shadow-lg transition p-6" data-aos="fade-up" data-aos-delay="400"> <!-- 55 -->
+        <img src="images/products/kitchen-tools.jpg" alt="أدوات مطبخ" class="rounded-lg mb-4"> <!-- 56 -->
+        <h3 class="text-xl font-semibold mb-2">أدوات مطبخ خشبية</h3> <!-- 57 -->
+        <p class="text-gray-600 mb-4">مصنوعة بحرفية عالية للمطبخ العصري.</p> <!-- 58 -->
+        <a href="#contact" class="bg-amber-600 text-white px-4 py-2 rounded-lg hover:bg-amber-700">اطلب الآن</a> <!-- 59 -->
+      </div> <!-- 60 -->
+
+    </div> <!-- 61 -->
+  </section> <!-- 62 -->
+
+  <!-- قسم عنّا --> <!-- 63 -->
+  <section id="about" class="py-20 bg-amber-50"> <!-- 64 -->
+    <div class="max-w-4xl mx-auto text-center px-6" data-aos="fade-up"> <!-- 65 -->
+      <h2 class="text-3xl font-bold mb-6">من نحن</h2> <!-- 66 -->
+      <p class="text-gray-700 text-lg leading-relaxed">نحن ورشة متخصصة في صناعة المنتجات الخشبية العصرية. نقدم حلولًا مبتكرة للأثاث والأدوات المنزلية المصنوعة بأفضل أنواع الخشب وبأيدي محترفة.</p> <!-- 67 -->
+    </div> <!-- 68 -->
+  </section> <!-- 69 -->
+
+  <!-- قسم التواصل --> <!-- 70 -->
+  <section id="contact" class="py-20 max-w-4xl mx-auto text-center px-6"> <!-- 71 -->
+    <h2 class="text-3xl font-bold mb-6">تواصل معنا</h2> <!-- 72 -->
+    <p class="text-gray-600 mb-8">لطلب المنتجات أو الاستفسار، يمكنكم التواصل عبر البريد أو الواتساب:</p> <!-- 73 -->
+    <div class="flex justify-center gap-6"> <!-- 74 -->
+      <a href="mailto:aymenmed25071999@gmail.com" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">📧 بريد إلكتروني</a> <!-- 75 -->
+      <a href="https://wa.me/213656687281" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600">💬 واتساب</a> <!-- 76 -->
+    </div> <!-- 77 -->
+  </section> <!-- 78 -->
+
+  <!-- الفوتر --> <!-- 79 -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center"> <!-- 80 -->
+    <p>© 2025 جميع الحقوق محفوظة | الفنيات الخشبية</p> <!-- 81 -->
+  </footer> <!-- 82 -->
+
+  <!-- مكتبة AOS --> <!-- 83 -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- 84 -->
+  <script>AOS.init({ duration: 1000, once: true });</script> <!-- 85 -->
+
+</body> <!-- 86 -->
+</html> <!-- 87 -->
