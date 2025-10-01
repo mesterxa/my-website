@@ -3,168 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الفنيات الخشبية</title>
+  <title>الأثاث الخشبي | قريباً إن شاء الله</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <style>
     body {
       font-family: 'Inter', sans-serif;
-      transition: background-color 0.6s ease, color 0.6s ease;
-    }
-    header, section, footer, nav, div, a, p, h1, h2, h3, h4 {
-      transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
-    }
-    .rotate-scale {
-      animation: rotateScale 0.6s ease forwards;
-    }
-    @keyframes rotateScale {
-      0%   { transform: rotate(0deg) scale(1); }
-      50%  { transform: rotate(180deg) scale(1.3); }
-      100% { transform: rotate(360deg) scale(1); }
     }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+<body class="bg-gray-50 text-gray-800">
 
-  <!-- Navigation -->
-  <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur shadow z-50" data-aos="fade-down">
-    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-      
-      <!-- Logo -->
-      <a href="#">
-        <img src="images/logo.png" alt="شعار الفنيات الخشبية" class="h-12 w-auto rounded-full shadow-lg transition duration-500">
-      </a>
-      
-      <!-- Menu -->
-      <nav class="hidden md:flex space-x-6 space-x-reverse">
-        <a href="#about" class="hover:text-blue-600 dark:hover:text-blue-400">من نحن</a>
-        <a href="#services" class="hover:text-blue-600 dark:hover:text-blue-400">خدماتنا</a>
-        <a href="#projects" class="hover:text-blue-600 dark:hover:text-blue-400">منتجاتنا</a>
-        <a href="#contact" class="hover:text-blue-600 dark:hover:text-blue-400">تواصل</a>
-      </nav>
-
-      <!-- Right side buttons -->
-      <div class="flex items-center space-x-4 space-x-reverse">
-        <!-- Dark Mode Toggle -->
-        <button id="darkModeToggle" 
-          class="p-2 rounded-full bg-gray-200 dark:bg-gray-700 hover:scale-110 transition duration-500 transform">
-          🌙
-        </button>
-        <!-- Call to action -->
-        <a href="#contact" class="hidden md:inline-block bg-blue-600 text-white px-4 py-2 rounded-xl shadow hover:bg-blue-700 transition">اطلب الآن</a>
+  <!-- هيدر -->
+  <header class="bg-white shadow-md fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- شعار -->
+      <div class="flex items-center space-x-3 space-x-reverse">
+        <img src="images/products/wall.jpg" alt="شعار الأثاث الخشبي" class="h-12 w-auto rounded-full shadow-lg">
+        <span class="text-xl font-bold">الأثاث الخشبي <span class="text-green-600">قريباً إن شاء الله</span></span>
       </div>
+      <!-- منيو -->
+      <nav class="hidden md:flex space-x-6 space-x-reverse">
+        <a href="#products" class="hover:text-green-600">المنتجات</a>
+        <a href="#contact" class="hover:text-green-600">تواصل معنا</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero -->
-  <section class="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-r from-yellow-50 to-white dark:from-gray-900 dark:to-gray-800 transition-colors duration-500">
-    <div data-aos="zoom-in">
-      <h2 class="text-4xl md:text-6xl font-bold mb-4">أهلاً بك في عالم الفنيات الخشبية</h2>
-      <p class="text-lg md:text-xl mb-6 text-gray-600 dark:text-gray-300">نصمم ونصنع منتجات خشبية عصرية وراقية تناسب جميع الأذواق.</p>
-      <a href="#services" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition">استكشف المزيد</a>
+  <!-- بطل -->
+  <section class="h-screen bg-cover bg-center flex items-center justify-center" 
+    style="background-image: url('images/products/wall.jpg');">
+    <div class="bg-black bg-opacity-50 text-center text-white p-8 rounded-2xl" data-aos="fade-up">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">الأثاث الخشبي</h1>
+      <p class="text-lg md:text-2xl mb-6">فن عصري في صناعة الخشب</p>
+      <a href="#products" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg transition">شاهد منتجاتنا</a>
     </div>
   </section>
 
-  <!-- Services -->
-  <section id="services" class="py-20 max-w-7xl mx-auto px-6 transition-colors duration-500">
-    <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">خدماتنا</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in">
-        <div class="text-yellow-700 text-4xl mb-4">🪵</div>
-        <h4 class="text-xl font-semibold mb-2">أثاث خشبي</h4>
-        <p class="text-gray-600 dark:text-gray-300">تصميم وصناعة طاولات، كراسي وأثاث متكامل بجودة عالية.</p>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
-        <div class="text-yellow-700 text-4xl mb-4">🎨</div>
-        <h4 class="text-xl font-semibold mb-2">نقش وزخرفة</h4>
-        <p class="text-gray-600 dark:text-gray-300">نقوش وزخارف فنية تزيد من جمال منتجاتنا.</p>
-      </div>
-      <div class="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="400">
-        <div class="text-yellow-700 text-4xl mb-4">🏡</div>
-        <h4 class="text-xl font-semibold mb-2">ديكور داخلي</h4>
-        <p class="text-gray-600 dark:text-gray-300">حلول خشبية عصرية تناسب المنازل والمكاتب.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800 transition-colors duration-500">
-    <div class="max-w-7xl mx-auto px-6">
-      <h3 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا</h3>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up">
-          <img src="images/products/product1.jpg" alt="منتج خشبي" class="w-full">
-          <div class="p-6">
-            <h4 class="font-semibold mb-2">طاولة خشبية</h4>
-            <p class="text-gray-600 dark:text-gray-300">طاولة أنيقة مصنوعة من خشب طبيعي عالي الجودة.</p>
-          </div>
+  <!-- المنتجات -->
+  <section id="products" class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا</h2>
+      <div class="grid md:grid-cols-3 gap-8 text-center">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in">
+          <img src="images/products/wall.jpg" alt="علاقة مفاتيح" class="h-40 mx-auto mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">علاقة مفاتيح عصرية</h3>
         </div>
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-          <img src="images/products/product2.jpg" alt="منتج خشبي" class="w-full">
-          <div class="p-6">
-            <h4 class="font-semibold mb-2">كرسي خشبي</h4>
-            <p class="text-gray-600 dark:text-gray-300">كرسي مريح يجمع بين التصميم العصري والمتانة.</p>
-          </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
+          <img src="images/products/wall.jpg" alt="علاقة ملابس" class="h-40 mx-auto mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">علاقة ملابس عصرية</h3>
         </div>
-        <div class="bg-white dark:bg-gray-900 rounded-2xl shadow hover:shadow-lg transition overflow-hidden" data-aos="fade-up" data-aos-delay="400">
-          <img src="images/products/product3.jpg" alt="منتج خشبي" class="w-full">
-          <div class="p-6">
-            <h4 class="font-semibold mb-2">ديكور جداري</h4>
-            <p class="text-gray-600 dark:text-gray-300">زخرفة خشبية تضيف لمسة فنية لجدران منزلك.</p>
-          </div>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
+          <img src="images/products/wall.jpg" alt="أدوات مطبخ" class="h-40 mx-auto mb-4 rounded-lg">
+          <h3 class="text-xl font-semibold mb-2">أدوات مطبخ</h3>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section id="contact" class="py-20 max-w-4xl mx-auto px-6 text-center transition-colors duration-500">
-    <h3 class="text-3xl font-bold mb-6" data-aos="fade-up">تواصل معنا</h3>
-    <p class="mb-8 text-gray-600 dark:text-gray-300" data-aos="fade-up" data-aos-delay="200">للطلبات والاستفسارات، تواصل معنا عبر البريد أو الواتساب.</p>
-    <div class="flex justify-center space-x-6 space-x-reverse">
-      <a href="mailto:example@email.com" class="bg-blue-600 text-white px-6 py-3 rounded-xl shadow hover:bg-blue-700 transition" data-aos="zoom-in">📧 بريد إلكتروني</a>
-      <a href="https://wa.me/201234567890" target="_blank" class="bg-green-500 text-white px-6 py-3 rounded-xl shadow hover:bg-green-600 transition" data-aos="zoom-in" data-aos-delay="200">💬 واتساب</a>
+  <!-- تواصل معنا -->
+  <section id="contact" class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">تواصل معنا</h2>
+      <p class="mb-6">نرحب باستفساراتكم وطلباتكم</p>
+      <div class="flex flex-col md:flex-row justify-center gap-6">
+        <a href="mailto:aymenmed25071999@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
+          البريد الإلكتروني
+        </a>
+        <a href="https://wa.me/213656687281" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow transition">
+          واتساب
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 dark:bg-black text-gray-300 py-6 text-center transition-colors duration-500" data-aos="fade-up">
-    <p>© 2025 جميع الحقوق محفوظة | الفنيات الخشبية</p>
+  <!-- فوتر -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>© 2025 جميع الحقوق محفوظة | الأثاث الخشبي</p>
   </footer>
 
-  <!-- AOS Script -->
+  <!-- مكتبة الحركات -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 1000, once: true });
-
-    const toggleBtn = document.getElementById("darkModeToggle");
-
-    // عند تحميل الصفحة: تحقق من التفضيل
-    if (localStorage.getItem("theme") === "dark") {
-      document.documentElement.classList.add("dark");
-      toggleBtn.textContent = "☀️";
-    } else {
-      document.documentElement.classList.remove("dark");
-      toggleBtn.textContent = "🌙";
-    }
-
-    // عند الضغط على الزر
-    toggleBtn.addEventListener("click", () => {
-      document.documentElement.classList.toggle("dark");
-
-      // إضافة الأنيميشن
-      toggleBtn.classList.add("rotate-scale");
-      setTimeout(() => toggleBtn.classList.remove("rotate-scale"), 600);
-
-      if (document.documentElement.classList.contains("dark")) {
-        localStorage.setItem("theme", "dark");
-        toggleBtn.textContent = "☀️";
-      } else {
-        localStorage.setItem("theme", "light");
-        toggleBtn.textContent = "🌙";
-      }
-    });
+    AOS.init();
   </script>
 </body>
 </html>
