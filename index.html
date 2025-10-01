@@ -1,92 +1,67 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" class="transition-colors duration-500">
+<html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الأثاث الخشبي | قريباً إن شاء الله</title>
+  <title>الأثاث الخشبي</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-    }
-  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gradient-to-br from-amber-50 to-emerald-50 text-gray-800 font-sans">
 
-  <!-- هيدر -->
-  <header class="bg-white shadow-md fixed w-full top-0 z-50">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6">
-      <!-- شعار -->
-      <div class="flex items-center space-x-3 space-x-reverse">
-        <img src="images/products/wall.jpg" alt="شعار الأثاث الخشبي" class="h-12 w-auto rounded-full shadow-lg">
-        <span class="text-xl font-bold">الأثاث الخشبي <span class="text-green-600">قريباً إن شاء الله</span></span>
-      </div>
-      <!-- منيو -->
-      <nav class="hidden md:flex space-x-6 space-x-reverse">
-        <a href="#products" class="hover:text-green-600">المنتجات</a>
-        <a href="#contact" class="hover:text-green-600">تواصل معنا</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- بطل -->
-  <section class="h-screen bg-cover bg-center flex items-center justify-center" 
-    style="background-image: url('images/products/wall.jpg');">
-    <div class="bg-black bg-opacity-50 text-center text-white p-8 rounded-2xl" data-aos="fade-up">
-      <h1 class="text-4xl md:text-6xl font-bold mb-4">الأثاث الخشبي</h1>
-      <p class="text-lg md:text-2xl mb-6">فن عصري في صناعة الخشب</p>
-      <a href="#products" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow-lg transition">شاهد منتجاتنا</a>
+  <!-- الهيرو -->
+  <section class="relative bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('wall.jpg');">
+    <div class="absolute inset-0 bg-black/40"></div>
+    <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
+      <h1 class="text-5xl font-bold mb-6 drop-shadow-lg">الأثاث الخشبي</h1>
+      <p class="text-2xl bg-green-600 px-4 py-2 rounded-lg inline-block shadow-lg">قريبًا إن شاء الله</p>
     </div>
   </section>
 
   <!-- المنتجات -->
-  <section id="products" class="py-16 bg-gray-100">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">منتجاتنا</h2>
-      <div class="grid md:grid-cols-3 gap-8 text-center">
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in">
-          <img src="images/products/wall.jpg" alt="علاقة مفاتيح" class="h-40 mx-auto mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">علاقة مفاتيح عصرية</h3>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="100">
-          <img src="images/products/wall.jpg" alt="علاقة ملابس" class="h-40 mx-auto mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">علاقة ملابس عصرية</h3>
-        </div>
-        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition" data-aos="zoom-in" data-aos-delay="200">
-          <img src="images/products/wall.jpg" alt="أدوات مطبخ" class="h-40 mx-auto mb-4 rounded-lg">
-          <h3 class="text-xl font-semibold mb-2">أدوات مطبخ</h3>
-        </div>
+  <section class="max-w-5xl mx-auto py-20 px-6">
+    <h2 class="text-4xl font-bold text-center text-amber-800 mb-14" data-aos="fade-up">منتجاتنا</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in">
+        <span class="text-4xl">🔑</span>
+        <h3 class="text-xl font-semibold mt-4">علاقة مفاتيح عصرية</h3>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="100">
+        <span class="text-4xl">👕</span>
+        <h3 class="text-xl font-semibold mt-4">علاقة ملابس عصرية</h3>
+      </div>
+      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="200">
+        <span class="text-4xl">🍴</span>
+        <h3 class="text-xl font-semibold mt-4">أدوات مطبخ</h3>
       </div>
     </div>
   </section>
 
-  <!-- تواصل معنا -->
-  <section id="contact" class="py-16">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8" data-aos="fade-up">تواصل معنا</h2>
-      <p class="mb-6">نرحب باستفساراتكم وطلباتكم</p>
-      <div class="flex flex-col md:flex-row justify-center gap-6">
-        <a href="mailto:aymenmed25071999@gmail.com" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow transition">
-          البريد الإلكتروني
+  <!-- تواصل -->
+  <section class="bg-emerald-50 py-20">
+    <div class="max-w-xl mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-8 text-emerald-700" data-aos="fade-up">تواصل معنا</h2>
+      <div class="flex flex-col gap-6">
+        <a href="mailto:aymenmed25071999@gmail.com" class="bg-blue-600 text-white py-4 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition" data-aos="zoom-in">
+          📧 راسلنا عبر البريد
         </a>
-        <a href="https://wa.me/213656687281" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg shadow transition">
-          واتساب
+        <a href="https://wa.me/213656687281" target="_blank" class="bg-green-600 text-white py-4 px-6 rounded-xl shadow-lg hover:bg-green-700 transition" data-aos="zoom-in" data-aos-delay="100">
+          💬 تواصل عبر واتساب
         </a>
       </div>
     </div>
   </section>
 
-  <!-- فوتر -->
-  <footer class="bg-gray-900 text-white py-6 text-center">
-    <p>© 2025 جميع الحقوق محفوظة | الأثاث الخشبي</p>
+  <!-- الفوتر -->
+  <footer class="bg-gray-900 text-gray-300 text-center py-8" data-aos="fade-up">
+    <p>© 2025 الأثاث الخشبي. جميع الحقوق محفوظة.</p>
   </footer>
 
-  <!-- مكتبة الحركات -->
+  <!-- مكتبة AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
+
 </body>
 </html>
