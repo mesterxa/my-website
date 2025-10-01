@@ -2,125 +2,116 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>متجر دولة السعادة 🛍️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>آفاق</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      direction: rtl;
-      background: #f4f4f9;
+      font-family: 'Tajawal', sans-serif;
       margin: 0;
       padding: 0;
+      background: #f9f9f9;
+      color: #333;
+      direction: rtl;
       text-align: center;
     }
     header {
-      background: #27ae60;
+      background: #8d4a25;
       color: white;
       padding: 20px;
-      font-size: 24px;
+    }
+    header h1 {
+      margin: 0;
     }
     .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 30px;
+      max-width: 1100px;
+      margin: auto;
     }
     .product {
       background: white;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      margin: 15px;
-      padding: 20px;
-      width: 220px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s;
+    }
+    .product:hover {
+      transform: translateY(-5px);
     }
     .product img {
       width: 100%;
-      border-radius: 8px;
+      height: 250px;
+      object-fit: cover;
     }
     .product h3 {
       margin: 10px 0;
-      font-size: 20px;
     }
     .product p {
       color: #555;
+      padding: 0 10px;
+    }
+    .price {
       font-size: 18px;
+      font-weight: bold;
+      margin: 10px 0;
+      color: #8d4a25;
     }
-    button {
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
-      background: #27ae60;
-      border: none;
-      color: white;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #219150;
-    }
-    #cart {
-      background: #fff3cd;
+    .contact {
+      background: #eee;
       padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
-      font-size: 18px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #8d4a25;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #6d3518;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>✨ آفاق ✨</h1>
+    <p>ديكورات خشبية يدوية مميزة</p>
+  </header>
 
-  <header>🛍️ متجر دولة السعادة - رمضان كريم 🌙</header>
-
-  <div class="products">
+  <section class="products">
     <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 1">
-      <h3>تمر فاخر</h3>
-      <p>السعر: 30 ريال</p>
-      <button onclick="addToCart('تمر فاخر', 30)">إضافة للسلة</button>
+      <img src="img/1.jpg" alt="منتج خشبي">
+      <h3>رف جداري أنيق</h3>
+      <p>رف خشبي بسيط لوضع النباتات أو الديكورات.</p>
+      <div class="price">120 ريال</div>
+      <a href="https://wa.me/201234567890" class="btn">اطلب الآن</a>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 2">
-      <h3>عسل طبيعي</h3>
-      <p>السعر: 50 ريال</p>
-      <button onclick="addToCart('عسل طبيعي', 50)">إضافة للسلة</button>
+      <img src="img/2.jpg" alt="منتج خشبي">
+      <h3>حامل مفاتيح</h3>
+      <p>حامل عملي مع رف صغير للديكور.</p>
+      <div class="price">90 ريال</div>
+      <a href="https://wa.me/201234567890" class="btn">اطلب الآن</a>
     </div>
 
     <div class="product">
-      <img src="https://via.placeholder.com/200" alt="منتج 3">
-      <h3>ماء زمزم</h3>
-      <p>السعر: 20 ريال</p>
-      <button onclick="addToCart('ماء زمزم', 20)">إضافة للسلة</button>
+      <img src="img/3.jpg" alt="منتج خشبي">
+      <h3>ديكور جداري</h3>
+      <p>قطعة خشبية تضيف لمسة فنية للمنزل.</p>
+      <div class="price">150 ريال</div>
+      <a href="https://wa.me/201234567890" class="btn">اطلب الآن</a>
     </div>
-  </div>
+  </section>
 
-  <div id="cart">
-    🛒 السلة فارغة
-  </div>
-
-  <script>
-    let cart = [];
-
-    function addToCart(product, price) {
-      cart.push({ product, price });
-      displayCart();
-    }
-
-    function displayCart() {
-      if (cart.length === 0) {
-        document.getElementById("cart").innerHTML = "🛒 السلة فارغة";
-      } else {
-        let content = "<h3>🛒 محتويات السلة:</h3><ul>";
-        let total = 0;
-        cart.forEach(item => {
-          content += `<li>${item.product} - ${item.price} ريال</li>`;
-          total += item.price;
-        });
-        content += `</ul><p>الإجمالي: ${total} ريال</p>`;
-        document.getElementById("cart").innerHTML = content;
-      }
-    }
-  </script>
-
+  <section class="contact">
+    <h2>📩 تواصل معنا</h2>
+    <p>للطلبات والاستفسارات تواصل عبر واتساب</p>
+    <a href="https://wa.me/201234567890" class="btn">تواصل عبر واتساب</a>
+  </section>
 </body>
 </html>
