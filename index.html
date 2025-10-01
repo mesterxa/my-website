@@ -3,65 +3,44 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>الأثاث الخشبي</title>
+  <title>موقعي العصري</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body class="bg-gradient-to-br from-amber-50 to-emerald-50 text-gray-800 font-sans">
-
+<body class="bg-gray-100 font-sans">
   <!-- الهيرو -->
-  <section class="relative bg-cover bg-center h-screen flex items-center justify-center" style="background-image: url('wall.jpg');">
-    <div class="absolute inset-0 bg-black/40"></div>
-    <div class="relative z-10 text-center text-white px-6" data-aos="fade-up">
-      <h1 class="text-5xl font-bold mb-6 drop-shadow-lg">الأثاث الخشبي</h1>
-      <p class="text-2xl bg-green-600 px-4 py-2 rounded-lg inline-block shadow-lg">قريبًا إن شاء الله</p>
+  <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center" style="background-image: url(https://source.unsplash.com/1600x900/?technology,code);">
+    <div class="bg-black bg-opacity-50 p-10 rounded-2xl text-white" data-aos="zoom-in">
+      <h1 class="text-5xl font-bold mb-4">مرحباً بك في موقعي</h1>
+      <p class="text-lg mb-6">موقع عصري بسيط و جميل</p>
+      <a href="#cards" class="px-6 py-3 bg-blue-600 hover:bg-blue-800 rounded-xl">ابدأ</a>
     </div>
   </section>
 
-  <!-- المنتجات -->
-  <section class="max-w-5xl mx-auto py-20 px-6">
-    <h2 class="text-4xl font-bold text-center text-amber-800 mb-14" data-aos="fade-up">منتجاتنا</h2>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in">
-        <span class="text-4xl">🔑</span>
-        <h3 class="text-xl font-semibold mt-4">علاقة مفاتيح عصرية</h3>
+  <!-- الكروت -->
+  <section id="cards" class="py-20 px-6 bg-white">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up">
+        <h2 class="text-2xl font-bold mb-4">خدمة ١</h2>
+        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="100">
-        <span class="text-4xl">👕</span>
-        <h3 class="text-xl font-semibold mt-4">علاقة ملابس عصرية</h3>
+      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="text-2xl font-bold mb-4">خدمة ٢</h2>
+        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
       </div>
-      <div class="bg-white rounded-2xl shadow-lg p-8 text-center hover:-translate-y-2 transition" data-aos="zoom-in" data-aos-delay="200">
-        <span class="text-4xl">🍴</span>
-        <h3 class="text-xl font-semibold mt-4">أدوات مطبخ</h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- تواصل -->
-  <section class="bg-emerald-50 py-20">
-    <div class="max-w-xl mx-auto text-center">
-      <h2 class="text-3xl font-bold mb-8 text-emerald-700" data-aos="fade-up">تواصل معنا</h2>
-      <div class="flex flex-col gap-6">
-        <a href="mailto:aymenmed25071999@gmail.com" class="bg-blue-600 text-white py-4 px-6 rounded-xl shadow-lg hover:bg-blue-700 transition" data-aos="zoom-in">
-          📧 راسلنا عبر البريد
-        </a>
-        <a href="https://wa.me/213656687281" target="_blank" class="bg-green-600 text-white py-4 px-6 rounded-xl shadow-lg hover:bg-green-700 transition" data-aos="zoom-in" data-aos-delay="100">
-          💬 تواصل عبر واتساب
-        </a>
+      <div class="bg-gray-50 shadow-lg rounded-2xl p-6 hover:scale-105 transition" data-aos="fade-up" data-aos-delay="200">
+        <h2 class="text-2xl font-bold mb-4">خدمة ٣</h2>
+        <p class="text-gray-600">وصف قصير عن هذه الخدمة.</p>
       </div>
     </div>
   </section>
 
   <!-- الفوتر -->
-  <footer class="bg-gray-900 text-gray-300 text-center py-8" data-aos="fade-up">
-    <p>© 2025 الأثاث الخشبي. جميع الحقوق محفوظة.</p>
+  <footer class="bg-gray-900 text-gray-300 text-center py-6" data-aos="fade-up">
+    <p>© 2025 جميع الحقوق محفوظة</p>
   </footer>
 
-  <!-- مكتبة AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-
+  <script>AOS.init();</script>
 </body>
 </html>
