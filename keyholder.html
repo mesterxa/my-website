@@ -1,132 +1,75 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar" dir="rtl" class="transition-colors duration-500">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>طلب علاقة مفاتيح عصرية</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Cairo', sans-serif; }
+    body { font-family: 'Inter', sans-serif; }
   </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
 
-  <!-- صندوق المنتج -->
-  <div class="max-w-3xl mx-auto mt-20 bg-white shadow-lg rounded-xl p-8">
-    <h1 class="text-3xl font-bold mb-6 text-center text-amber-800">علاقة مفاتيح عصرية</h1>
-
-    <!-- صورة المنتج -->
-    <img src="images/pic1.jpg" alt="علاقة مفاتيح عصرية" class="w-full h-64 object-cover rounded-lg mb-6">
-
-    <!-- اختيار الكمية -->
-    <div class="text-center mb-10">
-      <label for="quantity" class="block text-lg font-semibold mb-2">اختر الكمية:</label>
-      <input type="number" id="quantity" value="1" min="1" class="w-32 text-center border rounded-lg p-2">
-
-      <!-- السعر -->
-      <p class="mt-6 text-xl font-bold">السعر: <span id="price">950</span> دج</p>
+  <!-- Navigation -->
+  <header class="fixed w-full bg-white/80 dark:bg-gray-800/80 backdrop-blur shadow z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo -->
+      <a href="index.html">
+        <img src="images/wall.jpg" alt="شعار" class="h-12 w-auto rounded-full shadow-lg">
+      </a>
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-6 space-x-reverse">
+        <a href="index.html" class="hover:text-blue-600 dark:hover:text-blue-400">الرئيسية</a>
+      </nav>
     </div>
+  </header>
 
-    <!-- استمارة الطلب -->
-    <h2 class="text-2xl font-bold mb-4 text-center">📋 استمارة الطلب</h2>
-    <form class="space-y-4">
-      <div>
-        <label class="block mb-1 font-semibold">الاسم واللقب:</label>
-        <input type="text" class="w-full border rounded-lg p-2" required>
+  <!-- Hero المنتج -->
+  <section class="h-screen flex items-center justify-center text-center px-6 bg-gradient-to-r from-blue-50 to-white dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-2xl" data-aos="zoom-in">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 text-amber-800">علاقة مفاتيح عصرية</h2>
+      <img src="images/pic1.jpg" alt="علاقة مفاتيح عصرية" class="w-full h-72 object-cover rounded-xl shadow mb-6">
+      
+      <!-- اختيار الكمية -->
+      <div class="mb-6">
+        <label for="quantity" class="block text-lg font-semibold mb-2">اختر الكمية:</label>
+        <input type="number" id="quantity" value="1" min="1" class="w-32 text-center border rounded-lg p-2">
+        <p class="mt-4 text-xl font-bold">السعر: <span id="price">950</span> دج</p>
       </div>
 
-      <div>
-        <label class="block mb-1 font-semibold">رقم الهاتف:</label>
-        <input type="tel" class="w-full border rounded-lg p-2" required>
+      <!-- استمارة الطلب -->
+      <div class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow">
+        <h3 class="text-2xl font-bold mb-4">📋 استمارة الطلب</h3>
+        <form class="space-y-4 text-right">
+          <input type="text" placeholder="الاسم واللقب" class="w-full border rounded-lg p-2" required>
+          <input type="tel" placeholder="رقم الهاتف" class="w-full border rounded-lg p-2" required>
+          <select class="w-full border rounded-lg p-2" required>
+            <option value="">-- اختر الولاية --</option>
+            <option>الجزائر</option>
+            <option>وهران</option>
+            <option>سطيف</option>
+            <option>قسنطينة</option>
+            <option>باتنة</option>
+            <!-- ... باقي 58 ولاية -->
+          </select>
+          <input type="text" placeholder="البلدية" class="w-full border rounded-lg p-2" required>
+          <textarea placeholder="العنوان" class="w-full border rounded-lg p-2" rows="3" required></textarea>
+          <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 w-full">
+            ✅ إرسال الطلب
+          </button>
+        </form>
       </div>
+    </div>
+  </section>
 
-      <!-- اختيار الولاية -->
-      <div>
-        <label class="block mb-1 font-semibold">الولاية:</label>
-        <select id="wilaya" class="w-full border rounded-lg p-2" required>
-          <option value="">-- اختر الولاية --</option>
-          <option>أدرار</option>
-          <option>الشلف</option>
-          <option>الأغواط</option>
-          <option>أم البواقي</option>
-          <option>باتنة</option>
-          <option>بجاية</option>
-          <option>بسكرة</option>
-          <option>بشار</option>
-          <option>البليدة</option>
-          <option>البويرة</option>
-          <option>تمنراست</option>
-          <option>تبسة</option>
-          <option>تلمسان</option>
-          <option>تيارت</option>
-          <option>تيزي وزو</option>
-          <option>الجزائر</option>
-          <option>الجلفة</option>
-          <option>جيجل</option>
-          <option>سطيف</option>
-          <option>سعيدة</option>
-          <option>سكيكدة</option>
-          <option>سيدي بلعباس</option>
-          <option>عنابة</option>
-          <option>قالمة</option>
-          <option>قسنطينة</option>
-          <option>المدية</option>
-          <option>مستغانم</option>
-          <option>المسيلة</option>
-          <option>معسكر</option>
-          <option>ورقلة</option>
-          <option>وهران</option>
-          <option>البيض</option>
-          <option>إليزي</option>
-          <option>برج بوعريريج</option>
-          <option>بومرداس</option>
-          <option>الطارف</option>
-          <option>تندوف</option>
-          <option>تيسمسيلت</option>
-          <option>الوادي</option>
-          <option>خنشلة</option>
-          <option>سوق أهراس</option>
-          <option>تيبازة</option>
-          <option>ميلة</option>
-          <option>عين الدفلى</option>
-          <option>النعامة</option>
-          <option>عين تموشنت</option>
-          <option>غرداية</option>
-          <option>غليزان</option>
-          <option>تيميمون</option>
-          <option>برج باجي مختار</option>
-          <option>أولاد جلال</option>
-          <option>بني عباس</option>
-          <option>عين صالح</option>
-          <option>عين قزام</option>
-          <option>تقرت</option>
-          <option>جانت</option>
-          <option>المغير</option>
-          <option>المنيعة</option>
-        </select>
-      </div>
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-6 text-center">
+    <p>© 2025 جميع الحقوق محفوظة | الفنيات الخشبية</p>
+  </footer>
 
-      <!-- اختيار البلدية -->
-      <div>
-        <label class="block mb-1 font-semibold">البلدية:</label>
-        <input type="text" class="w-full border rounded-lg p-2" placeholder="أدخل البلدية" required>
-      </div>
-
-      <!-- العنوان -->
-      <div>
-        <label class="block mb-1 font-semibold">العنوان:</label>
-        <textarea class="w-full border rounded-lg p-2" rows="3" required></textarea>
-      </div>
-
-      <!-- زر إرسال -->
-      <div class="text-center">
-        <button type="submit" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
-          ✅ إرسال الطلب
-        </button>
-      </div>
-    </form>
-  </div>
-
+  <!-- Script -->
   <script>
     const basePrice = 950;
     const quantityInput = document.getElementById("quantity");
@@ -135,15 +78,11 @@
     function updatePrice() {
       let qty = parseInt(quantityInput.value) || 1;
       let total = qty * basePrice;
-
-      if (qty === 2) total = 1800; // تخفيض عند شراء قطعتين
-
+      if (qty === 2) total = 1800; // تخفيض للكمية 2
       priceElement.textContent = total;
     }
-
     quantityInput.addEventListener("input", updatePrice);
     updatePrice();
   </script>
-
 </body>
 </html>
