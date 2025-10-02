@@ -9,104 +9,130 @@
 <body class="bg-gray-50 text-gray-900">
 
   <!-- Header -->
-  <header class="bg-green-700 text-white shadow-md fixed w-full z-50">
+  <header class="bg-white shadow-md fixed w-full z-50">
     <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
-      <h1 class="text-2xl font-bold">🥢 أدوات المطبخ الخشبية</h1>
-      <a href="index.html" class="bg-white text-green-700 px-3 py-1 rounded-lg shadow hover:bg-gray-100 transition">⬅ رجوع</a>
+      <a href="index.html">
+        <img src="images/products/wall.jpg" alt="شعار" class="h-12 rounded-full shadow">
+      </a>
+      <h1 class="text-xl font-bold">طلب أدوات المطبخ الخشبية</h1>
     </div>
   </header>
 
-  <!-- Form -->
+  <!-- Form Section -->
   <main class="pt-28 pb-20 px-6">
-    <div class="max-w-lg mx-auto bg-white rounded-2xl shadow p-8">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      
+      <!-- Product -->
+      <div class="text-center mb-8">
+        <img src="images/products/pic3.jpg" alt="أدوات المطبخ" class="mx-auto rounded-xl shadow mb-4">
+        <h2 class="text-2xl font-bold mb-2">أدوات المطبخ الخشبية</h2>
+        <p class="text-gray-600">السعر: 1750 دج للقطعة الواحدة</p>
+        <p class="text-sm text-gray-500">خصم 100 دج لكل قطعة إضافية</p>
+      </div>
 
-      <img src="images/products/pic3.jpg" alt="أدوات المطبخ الخشبية" class="mx-auto mb-6 rounded-lg shadow">
-
-      <h2 class="text-2xl font-bold mb-4 text-center">طلب أدوات المطبخ الخشبية</h2>
-      <p class="text-center text-gray-600 mb-6">السعر: <span id="price">1750</span> دج</p>
-
-      <form id="orderForm" class="space-y-4">
-        <!-- الاسم -->
-        <input type="text" id="name" placeholder="الاسم" required class="w-full border rounded-lg p-2">
-
-        <!-- اللقب -->
-        <input type="text" id="surname" placeholder="اللقب" required class="w-full border rounded-lg p-2">
-
-        <!-- رقم الهاتف -->
-        <input type="tel" id="phone" placeholder="رقم الهاتف" required class="w-full border rounded-lg p-2">
-
-        <!-- الولاية -->
-        <select id="wilaya" class="w-full border rounded-lg p-2" required>
-          <option value="">اختر الولاية</option>
-          <option>الجزائر</option>
-          <option>وهران</option>
-          <option>سطيف</option>
-          <option>قسنطينة</option>
-          <option>عنابة</option>
-        </select>
-
-        <!-- البلدية -->
-        <input type="text" id="commune" placeholder="البلدية" required class="w-full border rounded-lg p-2">
-
-        <!-- العنوان -->
-        <input type="text" id="address" placeholder="العنوان الكامل" required class="w-full border rounded-lg p-2">
-
-        <!-- الكمية -->
+      <!-- Order Form -->
+      <form id="orderForm" class="space-y-6">
+        <!-- Full Name -->
         <div>
-          <label class="block mb-1">الكمية:</label>
-          <input type="number" id="quantity" min="1" value="1" class="w-full border rounded-lg p-2">
+          <label class="block mb-2 font-semibold">الاسم واللقب</label>
+          <input type="text" name="fullname" required class="w-full border rounded-lg p-3 focus:ring focus:ring-green-200">
         </div>
 
-        <!-- السعر الإجمالي -->
-        <p class="text-center font-bold text-lg">المجموع: <span id="total">1750</span> دج</p>
+        <!-- Wilaya -->
+        <div>
+          <label class="block mb-2 font-semibold">الولاية</label>
+          <select name="wilaya" required class="w-full border rounded-lg p-3">
+            <option value="">اختر الولاية</option>
+            <option>الجزائر</option>
+            <option>وهران</option>
+            <option>سطيف</option>
+            <option>قسنطينة</option>
+            <option>عنابة</option>
+            <!-- يمكنك إضافة باقي الولايات مثلما فعلنا في الصفحات الأخرى -->
+          </select>
+        </div>
 
-        <!-- زر إرسال -->
-        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">
-          إرسال الطلب
-        </button>
+        <!-- Baladiya -->
+        <div>
+          <label class="block mb-2 font-semibold">البلدية</label>
+          <input type="text" name="baladiya" required class="w-full border rounded-lg p-3">
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label class="block mb-2 font-semibold">العنوان</label>
+          <textarea name="address" rows="2" required class="w-full border rounded-lg p-3"></textarea>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block mb-2 font-semibold">رقم الهاتف</label>
+          <input type="tel" name="phone" required class="w-full border rounded-lg p-3">
+        </div>
+
+        <!-- Quantity -->
+        <div>
+          <label class="block mb-2 font-semibold">الكمية</label>
+          <input type="number" name="quantity" id="quantity" value="1" min="1" class="w-full border rounded-lg p-3">
+        </div>
+
+        <!-- Total Price -->
+        <div>
+          <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">1750</span> دج</p>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">إرسال الطلب</button>
       </form>
     </div>
   </main>
 
   <script>
-    const pricePerItem = 1750;
-    const quantityInput = document.getElementById("quantity");
-    const totalEl = document.getElementById("total");
-    const orderForm = document.getElementById("orderForm");
+    const qtyInput = document.getElementById("quantity");
+    const totalPriceEl = document.getElementById("totalPrice");
 
-    quantityInput.addEventListener("input", () => {
-      const qty = parseInt(quantityInput.value) || 1;
-      totalEl.textContent = pricePerItem * qty;
-    });
+    function updatePrice() {
+      let qty = parseInt(qtyInput.value) || 1;
+      let total = (qty === 1) ? 1750 : (1750 + (qty - 1) * 1650);
+      totalPriceEl.textContent = total;
+    }
 
-    orderForm.addEventListener("submit", async (e) => {
+    qtyInput.addEventListener("input", updatePrice);
+    updatePrice();
+
+    // إرسال إلى تليجرام
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
       e.preventDefault();
 
-      const data = {
-        name: document.getElementById("name").value,
-        surname: document.getElementById("surname").value,
-        phone: document.getElementById("phone").value,
-        wilaya: document.getElementById("wilaya").value,
-        commune: document.getElementById("commune").value,
-        address: document.getElementById("address").value,
-        quantity: quantityInput.value,
-        total: totalEl.textContent
-      };
+      const form = new FormData(this);
+      const message = `
+🥢 طلب جديد - أدوات المطبخ الخشبية
+👤 الاسم: ${form.get("fullname")}
+📍 الولاية: ${form.get("wilaya")}
+🏘️ البلدية: ${form.get("baladiya")}
+🏠 العنوان: ${form.get("address")}
+📞 الهاتف: ${form.get("phone")}
+🔢 الكمية: ${form.get("quantity")}
+💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
+`;
 
-      // إرسال إلى تليجرام
-      const botToken = "ضع_التوكن_هنا";
+      const token = "ضع_التوكن_هنا";
       const chatId = "ضع_معرفك_هنا";
-      const message = `🥢 طلب جديد (أدوات المطبخ الخشبية)\n\n👤 الاسم: ${data.name} ${data.surname}\n📞 الهاتف: ${data.phone}\n📍 ${data.wilaya} - ${data.commune}\n🏠 ${data.address}\n🔢 الكمية: ${data.quantity}\n💰 المجموع: ${data.total} دج`;
 
-      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: chatId, text: message })
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+        })
+      }).then(() => {
+        alert("✅ تم إرسال الطلب بنجاح");
+        this.reset();
+        updatePrice();
+      }).catch(() => {
+        alert("❌ حدث خطأ، حاول مجدداً");
       });
-
-      alert("✅ تم إرسال الطلب بنجاح!");
-      orderForm.reset();
-      totalEl.textContent = pricePerItem;
     });
   </script>
 </body>
