@@ -1,173 +1,180 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>طلب علاقة المفاتيح</title>
+  <title>طلب علاقة مفاتيح</title>
   <style>
     body {
-      font-family: 'Tahoma', sans-serif;
-      background: #0f2027;
-      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
-      color: white;
+      font-family: "Tajawal", sans-serif;
+      background: #f7f7f7;
       margin: 0;
       padding: 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
     }
-    .container {
-      max-width: 500px;
-      margin: 30px auto;
-      background: rgba(0,0,0,0.6);
+    .form-container {
+      background: white;
       padding: 20px;
       border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-    }
-    img {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 450px;
       width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
     }
-    label {
-      display: block;
-      margin: 10px 0 5px;
-      text-align: right;
+    h2 {
+      text-align: center;
+      color: #333;
     }
-    select, input, textarea {
+    input, select, textarea, button {
       width: 100%;
       padding: 10px;
-      margin-bottom: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-    }
-    .price-box {
-      background: #111;
-      padding: 12px;
-      border-radius: 8px;
-      margin: 15px 0;
-      font-size: 18px;
-      font-weight: bold;
-      color: #00ff9d;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 15px;
     }
     button {
-      width: 100%;
-      background: green;
+      background: #28a745;
       color: white;
-      border: none;
-      padding: 12px;
-      border-radius: 8px;
-      font-size: 18px;
+      font-weight: bold;
       cursor: pointer;
       transition: 0.3s;
     }
     button:hover {
-      background: darkgreen;
-    }
-    footer {
-      margin-top: 15px;
-      font-size: 14px;
-      color: #ccc;
+      background: #218838;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h2>🗝️ طلب علاقة المفاتيح</h2>
-    <img src="pic1.jpg" alt="علاقة مفاتيح">
+  <div class="form-container">
+    <h2>طلب علاقة مفاتيح</h2>
+    <form id="orderForm">
+      <input type="text" id="name" placeholder="الاسم واللقب" required>
+      <input type="number" id="quantity" placeholder="الكمية" min="1" value="1" required>
+      <input type="text" id="phone" placeholder="رقم الهاتف" required>
 
-    <label for="quantity">الكمية</label>
-    <input type="number" id="quantity" min="1" value="1">
+      <!-- قائمة الولايات -->
+      <select id="wilaya" required>
+        <option value="">اختر الولاية</option>
+        <option>أدرار</option>
+        <option>الشلف</option>
+        <option>الأغواط</option>
+        <option>أم البواقي</option>
+        <option>باتنة</option>
+        <option>بجاية</option>
+        <option>بسكرة</option>
+        <option>بشار</option>
+        <option>البليدة</option>
+        <option>البويرة</option>
+        <option>تمنراست</option>
+        <option>تبسة</option>
+        <option>تلمسان</option>
+        <option>تيارت</option>
+        <option>تيزي وزو</option>
+        <option>الجزائر</option>
+        <option>الجلفة</option>
+        <option>جيجل</option>
+        <option>سطيف</option>
+        <option>سعيدة</option>
+        <option>سكيكدة</option>
+        <option>سيدي بلعباس</option>
+        <option>عنابة</option>
+        <option>قالمة</option>
+        <option>قسنطينة</option>
+        <option>المدية</option>
+        <option>مستغانم</option>
+        <option>المسيلة</option>
+        <option>معسكر</option>
+        <option>ورقلة</option>
+        <option>وهران</option>
+        <option>البيض</option>
+        <option>إليزي</option>
+        <option>برج بوعريريج</option>
+        <option>بومرداس</option>
+        <option>الطارف</option>
+        <option>تندوف</option>
+        <option>تيسمسيلت</option>
+        <option>الوادي</option>
+        <option>خنشلة</option>
+        <option>سوق أهراس</option>
+        <option>تيبازة</option>
+        <option>ميلة</option>
+        <option>عين الدفلى</option>
+        <option>النعامة</option>
+        <option>عين تموشنت</option>
+        <option>غرداية</option>
+        <option>غليزان</option>
+        <option>تيميمون</option>
+        <option>برج باجي مختار</option>
+        <option>أولاد جلال</option>
+        <option>بني عباس</option>
+        <option>إن صالح</option>
+        <option>إن قزام</option>
+        <option>توقرت</option>
+        <option>جانت</option>
+        <option>المغير</option>
+        <option>المنيعة</option>
+      </select>
 
-    <div class="price-box" id="price">السعر: 950 دج</div>
+      <input type="text" id="commune" placeholder="البلدية" required>
+      <textarea id="address" placeholder="العنوان بالتفصيل" required></textarea>
 
-    <label for="wilaya">الولاية</label>
-    <select id="wilaya">
-      <option value="">-- اختر الولاية --</option>
-      <option>أدرار</option>
-      <option>الشلف</option>
-      <option>الأغواط</option>
-      <option>أم البواقي</option>
-      <option>باتنة</option>
-      <option>بجاية</option>
-      <option>بسكرة</option>
-      <option>بشار</option>
-      <option>البليدة</option>
-      <option>البويرة</option>
-      <option>تمنراست</option>
-      <option>تبسة</option>
-      <option>تلمسان</option>
-      <option>تيارت</option>
-      <option>تيزي وزو</option>
-      <option>الجزائر</option>
-      <option>الجلفة</option>
-      <option>جيجل</option>
-      <option>سطيف</option>
-      <option>سعيدة</option>
-      <option>سكيكدة</option>
-      <option>سيدي بلعباس</option>
-      <option>عنابة</option>
-      <option>قالمة</option>
-      <option>قسنطينة</option>
-      <option>المدية</option>
-      <option>مستغانم</option>
-      <option>المسيلة</option>
-      <option>معسكر</option>
-      <option>ورقلة</option>
-      <option>وهران</option>
-      <option>البيض</option>
-      <option>إليزي</option>
-      <option>برج بوعريريج</option>
-      <option>بومرداس</option>
-      <option>الطارف</option>
-      <option>تندوف</option>
-      <option>تيسمسيلت</option>
-      <option>الوادي</option>
-      <option>خنشلة</option>
-      <option>سوق أهراس</option>
-      <option>تيبازة</option>
-      <option>ميلة</option>
-      <option>عين الدفلى</option>
-      <option>النعامة</option>
-      <option>عين تموشنت</option>
-      <option>غرداية</option>
-      <option>غليزان</option>
-      <option>تيميمون</option>
-      <option>برج باجي مختار</option>
-      <option>أولاد جلال</option>
-      <option>بني عباس</option>
-      <option>إن صالح</option>
-      <option>إن قزام</option>
-      <option>تقرت</option>
-      <option>جانت</option>
-      <option>المغير</option>
-      <option>المنيعة</option>
-    </select>
-
-    <label for="baladiya">البلدية</label>
-    <input type="text" id="baladiya" placeholder="اكتب البلدية">
-
-    <label for="address">العنوان</label>
-    <textarea id="address" rows="2" placeholder="اكتب العنوان الكامل"></textarea>
-
-    <label for="phone">📞 رقم الهاتف</label>
-    <input type="tel" id="phone" placeholder="مثال" pattern="[0-9]{10}" required>
-
-    <button>✔️ إرسال الطلب</button>
-    <footer>© 2025 الفنيات الخشبية | جميع الحقوق محفوظة</footer>
+      <p><strong>السعر:</strong> <span id="price">950</span> دج</p>
+      <button type="submit">📩 إرسال الطلب</button>
+    </form>
+    <p id="status"></p>
   </div>
 
   <script>
-    const quantityInput = document.getElementById("quantity");
-    const priceBox = document.getElementById("price");
+    const TOKEN = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11VkzZcXz5I";
+    const CHAT_ID = "6858411980";
+    const UNIT_PRICE = 950;
 
-    function updatePrice() {
-      const q = parseInt(quantityInput.value) || 1;
-      const price = (950 * q) - (50 * q);
-      priceBox.textContent = "السعر: " + price + " دج";
-    }
+    const form = document.getElementById("orderForm");
+    const priceEl = document.getElementById("price");
+    const qtyInput = document.getElementById("quantity");
 
-    quantityInput.addEventListener("input", updatePrice);
-    updatePrice();
+    // تحديث السعر تلقائياً
+    qtyInput.addEventListener("input", () => {
+      let qty = parseInt(qtyInput.value) || 1;
+      let total = (UNIT_PRICE * qty) - (qty * 50);
+      if (total < UNIT_PRICE) total = UNIT_PRICE;
+      priceEl.textContent = total;
+    });
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      let name = document.getElementById("name").value;
+      let qty = document.getElementById("quantity").value;
+      let phone = document.getElementById("phone").value;
+      let wilaya = document.getElementById("wilaya").value;
+      let commune = document.getElementById("commune").value;
+      let address = document.getElementById("address").value;
+      let total = priceEl.textContent;
+
+      let message = `🛍 طلب جديد:\n\n👤 الاسم: ${name}\n📞 الهاتف: ${phone}\n📦 الكمية: ${qty}\n💰 السعر: ${total} دج\n🌍 الولاية: ${wilaya}\n🏘 البلدية: ${commune}\n📍 العنوان: ${address}`;
+
+      fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          chat_id: CHAT_ID,
+          text: message
+        })
+      })
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("status").textContent = "✅ تم إرسال طلبك بنجاح!";
+        form.reset();
+        priceEl.textContent = UNIT_PRICE;
+      })
+      .catch(err => {
+        document.getElementById("status").textContent = "❌ حدث خطأ، حاول مرة أخرى.";
+      });
+    });
   </script>
 </body>
 </html>
