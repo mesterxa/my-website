@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>طلب أدوات المطبخ الخشبية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-green-700 text-white shadow-md fixed w-full z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">
+      <h1 class="text-2xl font-bold">🥢 أدوات المطبخ الخشبية</h1>
+      <a href="index.html" class="bg-white text-green-700 px-3 py-1 rounded-lg shadow hover:bg-gray-100 transition">⬅ رجوع</a>
+    </div>
+  </header>
+
+  <!-- Form -->
+  <main class="pt-28 pb-20 px-6">
+    <div class="max-w-lg mx-auto bg-white rounded-2xl shadow p-8">
+
+      <img src="images/products/pic3.jpg" alt="أدوات المطبخ الخشبية" class="mx-auto mb-6 rounded-lg shadow">
+
+      <h2 class="text-2xl font-bold mb-4 text-center">طلب أدوات المطبخ الخشبية</h2>
+      <p class="text-center text-gray-600 mb-6">السعر: <span id="price">1750</span> دج</p>
+
+      <form id="orderForm" class="space-y-4">
+        <!-- الاسم -->
+        <input type="text" id="name" placeholder="الاسم" required class="w-full border rounded-lg p-2">
+
+        <!-- اللقب -->
+        <input type="text" id="surname" placeholder="اللقب" required class="w-full border rounded-lg p-2">
+
+        <!-- رقم الهاتف -->
+        <input type="tel" id="phone" placeholder="رقم الهاتف" required class="w-full border rounded-lg p-2">
+
+        <!-- الولاية -->
+        <select id="wilaya" class="w-full border rounded-lg p-2" required>
+          <option value="">اختر الولاية</option>
+          <option>الجزائر</option>
+          <option>وهران</option>
+          <option>سطيف</option>
+          <option>قسنطينة</option>
+          <option>عنابة</option>
+        </select>
+
+        <!-- البلدية -->
+        <input type="text" id="commune" placeholder="البلدية" required class="w-full border rounded-lg p-2">
+
+        <!-- العنوان -->
+        <input type="text" id="address" placeholder="العنوان الكامل" required class="w-full border rounded-lg p-2">
+
+        <!-- الكمية -->
+        <div>
+          <label class="block mb-1">الكمية:</label>
+          <input type="number" id="quantity" min="1" value="1" class="w-full border rounded-lg p-2">
+        </div>
+
+        <!-- السعر الإجمالي -->
+        <p class="text-center font-bold text-lg">المجموع: <span id="total">1750</span> دج</p>
+
+        <!-- زر إرسال -->
+        <button type="submit" class="w-full bg-green-600 text-white py-2 rounded-lg hover:bg-green-700 transition">
+          إرسال الطلب
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <script>
+    const pricePerItem = 1750;
+    const quantityInput = document.getElementById("quantity");
+    const totalEl = document.getElementById("total");
+    const orderForm = document.getElementById("orderForm");
+
+    quantityInput.addEventListener("input", () => {
+      const qty = parseInt(quantityInput.value) || 1;
+      totalEl.textContent = pricePerItem * qty;
+    });
+
+    orderForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        name: document.getElementById("name").value,
+        surname: document.getElementById("surname").value,
+        phone: document.getElementById("phone").value,
+        wilaya: document.getElementById("wilaya").value,
+        commune: document.getElementById("commune").value,
+        address: document.getElementById("address").value,
+        quantity: quantityInput.value,
+        total: totalEl.textContent
+      };
+
+      // إرسال إلى تليجرام
+      const botToken = "ضع_التوكن_هنا";
+      const chatId = "ضع_معرفك_هنا";
+      const message = `🥢 طلب جديد (أدوات المطبخ الخشبية)\n\n👤 الاسم: ${data.name} ${data.surname}\n📞 الهاتف: ${data.phone}\n📍 ${data.wilaya} - ${data.commune}\n🏠 ${data.address}\n🔢 الكمية: ${data.quantity}\n💰 المجموع: ${data.total} دج`;
+
+      await fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text: message })
+      });
+
+      alert("✅ تم إرسال الطلب بنجاح!");
+      orderForm.reset();
+      totalEl.textContent = pricePerItem;
+    });
+  </script>
+</body>
+</html>
+
