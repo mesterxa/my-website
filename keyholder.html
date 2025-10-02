@@ -1,109 +1,181 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>متجري العصري</title>
-  <style>
-    body {
-      font-family: "Tahoma", sans-serif;
-      background-color: #f4f6fa; /* خلفية فاتحة */
-      margin: 0;
-      padding: 0;
-      color: #333;
-    }
+<!DOCTYPE html>  <html lang="ar" dir="rtl">  
+<head>  
+  <meta charset="UTF-8">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>طلب علاقة مفاتيح عصرية</title>  
+  <script src="https://cdn.tailwindcss.com"></script>  
+</head>  
+<body class="bg-gray-50 text-gray-900">    <!-- Header -->    <header class="bg-white shadow-md fixed w-full z-50">  
+    <div class="max-w-7xl mx-auto flex justify-between items-center py-4 px-6">  
+      <a href="index.html">  
+        <img src="images/products/wall.jpg" alt="شعار" class="h-12 rounded-full shadow">  
+      </a>  
+      <h1 class="text-xl font-bold">طلب علاقة مفاتيح</h1>  
+    </div>  
+  </header>    <!-- Form Section -->    <main class="pt-28 pb-20 px-6">  
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">  <!-- Product -->  
+  <div class="text-center mb-8">  
+    <img src="images/products/pic1.jpg" alt="علاقة مفاتيح" class="mx-auto rounded-xl shadow mb-4">  
+    <h2 class="text-2xl font-bold mb-2">علاقة مفاتيح عصرية</h2>  
+    <p class="text-gray-600">السعر: 950 دج للقطعة الواحدة</p>  
+    <p class="text-sm text-gray-500">خصم 50 دج لكل قطعة إضافية</p>  
+  </div>  
 
-    header {
-      background-color: #1e3a8a; /* أزرق غامق */
-      color: white;
-      padding: 1rem;
-      text-align: center;
-      font-size: 1.5rem;
-      font-weight: bold;
-    }
+  <!-- Order Form -->  
+  <form id="orderForm" class="space-y-6">  
+    <!-- Full Name -->  
+    <div>  
+      <label class="block mb-2 font-semibold">الاسم واللقب</label>  
+      <input type="text" name="fullname" required class="w-full border rounded-lg p-3 focus:ring focus:ring-blue-200">  
+    </div>  
 
-    .container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
+    <!-- Wilaya -->  
+    <div>  
+      <label class="block mb-2 font-semibold">الولاية</label>  
+      <select name="wilaya" required class="w-full border rounded-lg p-3">  
+        <option value="">اختر الولاية</option>  
+        <!-- نضيف 58 ولاية -->  
+        <option>أدرار</option>  
+        <option>الشلف</option>  
+        <option>الأغواط</option>  
+        <option>أم البواقي</option>  
+        <option>باتنة</option>  
+        <option>بجاية</option>  
+        <option>بسكرة</option>  
+        <option>بشار</option>  
+        <option>البليدة</option>  
+        <option>البويرة</option>  
+        <option>تمنراست</option>  
+        <option>تبسة</option>  
+        <option>تلمسان</option>  
+        <option>تيارت</option>  
+        <option>تيزي وزو</option>  
+        <option>الجزائر</option>  
+        <option>الجلفة</option>  
+        <option>جيجل</option>  
+        <option>سطيف</option>  
+        <option>سعيدة</option>  
+        <option>سكيكدة</option>  
+        <option>سيدي بلعباس</option>  
+        <option>عنابة</option>  
+        <option>قالمة</option>  
+        <option>قسنطينة</option>  
+        <option>المدية</option>  
+        <option>مستغانم</option>  
+        <option>المسيلة</option>  
+        <option>معسكر</option>  
+        <option>ورقلة</option>  
+        <option>وهران</option>  
+        <option>البيض</option>  
+        <option>إليزي</option>  
+        <option>برج بوعريريج</option>  
+        <option>بومرداس</option>  
+        <option>الطارف</option>  
+        <option>تندوف</option>  
+        <option>تيسمسيلت</option>  
+        <option>الوادي</option>  
+        <option>خنشلة</option>  
+        <option>سوق أهراس</option>  
+        <option>تيبازة</option>  
+        <option>ميلة</option>  
+        <option>عين الدفلى</option>  
+        <option>النعامة</option>  
+        <option>عين تموشنت</option>  
+        <option>غرداية</option>  
+        <option>غليزان</option>  
+        <option>تيميمون</option>  
+        <option>برج باجي مختار</option>  
+        <option>أولاد جلال</option>  
+        <option>بني عباس</option>  
+        <option>إن صالح</option>  
+        <option>إن قزام</option>  
+        <option>تقرت</option>  
+        <option>جانت</option>  
+        <option>المغير</option>  
+        <option>المنيعة</option>  
+      </select>  
+    </div>  
 
-    .card {
-      background: white; /* أبيض للبطاقات */
-      border-radius: 15px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
+    <!-- Baladiya -->  
+    <div>  
+      <label class="block mb-2 font-semibold">البلدية</label>  
+      <input type="text" name="baladiya" required class="w-full border rounded-lg p-3">  
+    </div>  
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
+    <!-- Address -->  
+    <div>  
+      <label class="block mb-2 font-semibold">العنوان</label>  
+      <textarea name="address" rows="2" required class="w-full border rounded-lg p-3"></textarea>  
+    </div>  
 
-    .card img {
-      max-width: 100%;
-      border-radius: 10px;
-      margin-bottom: 1rem;
-    }
+    <!-- Phone -->  
+    <div>  
+      <label class="block mb-2 font-semibold">رقم الهاتف</label>  
+      <input type="tel" name="phone" required class="w-full border rounded-lg p-3">  
+    </div>  
 
-    .card h3 {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
-      color: #1e3a8a;
-    }
+    <!-- Quantity -->  
+    <div>  
+      <label class="block mb-2 font-semibold">الكمية</label>  
+      <input type="number" name="quantity" id="quantity" value="1" min="1" class="w-full border rounded-lg p-3">  
+    </div>  
 
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-      color: #555;
-    }
+    <!-- Total Price -->  
+    <div>  
+      <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">950</span> دج</p>  
+    </div>  
 
-    .btn {
-      display: inline-block;
-      background-color: #2563eb; /* أزرق */
-      color: white;
-      padding: 0.6rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease;
-    }
+    <!-- Submit -->  
+    <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">إرسال الطلب</button>  
+  </form>  
+</div>
 
-    .btn:hover {
-      background-color: #1d4ed8; /* أزرق أغمق */
-    }
-  </style>
-</head>
-<body>
-
-  <header>🛒 متجري العصري</header>
-
-  <div class="container">
-    <div class="card">
-      <img src="images/pic1.jpg" alt="علاقة مفاتيح">
-      <h3>علاقة مفاتيح عصرية</h3>
-      <p>قطعة خشبية أنيقة لحفظ المفاتيح.</p>
-      <a href="keyholder.html" class="btn">طلب</a>
-    </div>
-
-    <div class="card">
-      <img src="images/pic2.jpg" alt="علاقة ملابس">
-      <h3>علاقة ملابس عصرية</h3>
-      <p>تصميم عملي أنيق لترتيب ملابسك.</p>
-      <a href="clothes.html" class="btn">طلب</a>
-    </div>
-
-    <div class="card">
-      <img src="images/pic3.jpg" alt="منتج آخر">
-      <h3>منتج مميز</h3>
-      <p>وصف قصير للمنتج مع تفاصيل جذابة.</p>
-      <a href="special.html" class="btn">طلب</a>
-    </div>
-  </div>
-
-</body>
-</html>
-
+  </main>    <script>  
+    const qtyInput = document.getElementById("quantity");  
+    const totalPriceEl = document.getElementById("totalPrice");  
+  
+    function updatePrice() {  
+      let qty = parseInt(qtyInput.value) || 1;  
+      let total = (qty === 1) ? 950 : (950 + (qty - 1) * 900);  
+      totalPriceEl.textContent = total;  
+    }  
+  
+    qtyInput.addEventListener("input", updatePrice);  
+    updatePrice();  
+  
+    // إرسال إلى تليجرام  
+    document.getElementById("orderForm").addEventListener("submit", function(e) {  
+      e.preventDefault();  
+  
+      const form = new FormData(this);  
+      const message = `  
+🛒 طلب جديد - علاقة مفاتيح  
+👤 الاسم: ${form.get("fullname")}  
+📍 الولاية: ${form.get("wilaya")}  
+🏘️ البلدية: ${form.get("baladiya")}  
+🏠 العنوان: ${form.get("address")}  
+📞 الهاتف: ${form.get("phone")}  
+🔢 الكمية: ${form.get("quantity")}  
+💰 السعر الإجمالي: ${totalPriceEl.textContent} دج  
+`;  
+  
+      const token = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11VkzZcXz5I";  
+      const chatId = "6858411980"; // ضع هنا chat_id الخاص بك  
+  
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {  
+        method: "POST",  
+        headers: { "Content-Type": "application/json" },  
+        body: JSON.stringify({  
+          chat_id: chatId,  
+          text: message,  
+        })  
+      }).then(() => {  
+        alert("✅ تم إرسال الطلب بنجاح");  
+        this.reset();  
+        updatePrice();  
+      }).catch(() => {  
+        alert("❌ حدث خطأ، حاول مجدداً");  
+      });  
+    });  
+  </script>  </body>  
+</html>  
