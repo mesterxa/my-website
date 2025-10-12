@@ -128,26 +128,26 @@
         </button>
       </form>
     </div>
-  </main>
+</main>
 
-  <script>
-    const qtyInput = document.getElementById("quantity");
-    const totalPriceEl = document.getElementById("totalPrice");
+<script>
+  const qtyInput = document.getElementById("quantity");
+  const totalPriceEl = document.getElementById("totalPrice");
 
-    function updatePrice() {
-      let qty = parseInt(qtyInput.value) || 1;
-      let total = (qty === 1) ? 1990 : (1990 + (qty - 1) * 1890);
-      totalPriceEl.textContent = total;
-    }
+  function updatePrice() {
+    let qty = parseInt(qtyInput.value) || 1;
+    let total = (qty === 1) ? 1990 : (1990 + (qty - 1) * 1000);
+    totalPriceEl.textContent = total;
+  }
 
-    qtyInput.addEventListener("input", updatePrice);
-    updatePrice();
+  qtyInput.addEventListener("input", updatePrice);
+  updatePrice();
 
-    document.getElementById("orderForm").addEventListener("submit", function(e) {
-      e.preventDefault();
+  document.getElementById("orderForm").addEventListener("submit", function (e) {
+    e.preventDefault();
 
-      const form = new FormData(this);
-      const message = `
+    const form = new FormData(this);
+    const message = `
 🛒 طلب جديد - علاقة سكاكين
 👤 الاسم: ${form.get("fullname")}
 📍 الولاية: ${form.get("wilaya")}
@@ -158,14 +158,14 @@
 💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
 `;
 
-      const token = "ضع_رمز_البوت_هنا";
-      const chatId = "ضع_chat_id_هنا";
+    const token = "ضع_رمز_البوت_هنا";
+    const chatId = "ضع_chat_id_هنا";
 
-      fetch(\`https://api.telegram.org/bot\${token}/sendMessage\`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ chat_id: chatId, text: message })
-      })
+    fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ chat_id: chatId, text: message }),
+    })
       .then(() => {
         alert("✅ تم إرسال الطلب بنجاح");
         this.reset();
@@ -174,8 +174,8 @@
       .catch(() => {
         alert("❌ حدث خطأ، حاول مجدداً");
       });
-    });
-  </script>
+  });
+</script>
 
 </body>
 </html>
