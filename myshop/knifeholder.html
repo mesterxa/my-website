@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>طلب علاقة سكاكين عصرية</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- Header -->
+  <header class="bg-white shadow-sm py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6">
+      <a href="index.html">
+        <img src="images/products/wall.png" alt="شعار" class="h-10">
+      </a>
+      <h1 class="text-xl font-bold">طلب علاقة سكاكين</h1>
+    </div>
+  </header>
+
+  <!-- Form Section -->
+  <main class="pt-20 px-6">
+    <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
+      <div class="text-center mb-8">
+        <img src="images/products/pic2.jpg" alt="علاقة سكاكين عصرية" class="w-full h-64 object-cover rounded-xl mb-4">
+        <h2 class="text-2xl font-bold mb-2">علاقة سكاكين عصرية</h2>
+        <p class="text-gray-600">السعر: 1990 دج للقطعة الواحدة</p>
+        <p class="text-sm text-gray-500">خصم 100 دج لكل قطعة إضافية</p>
+      </div>
+
+      <!-- Order Form -->
+      <form id="orderForm" class="space-y-6">
+        
+        <!-- Full Name -->
+        <div>
+          <label class="block mb-2 font-semibold">الاسم واللقب</label>
+          <input type="text" name="fullname" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Wilaya -->
+        <div>
+          <label class="block mb-2 font-semibold">الولاية</label>
+          <select name="wilaya" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+            <option value="">اختر الولاية</option>
+            <option>أدرار</option>
+            <option>الشلف</option>
+            <option>الأغواط</option>
+            <option>أم البواقي</option>
+            <option>باتنة</option>
+            <option>بجاية</option>
+            <option>بسكرة</option>
+            <option>بشار</option>
+            <option>البليدة</option>
+            <option>البويرة</option>
+            <option>تمنراست</option>
+            <option>تبسة</option>
+            <option>تلمسان</option>
+            <option>تيارت</option>
+            <option>تيزي وزو</option>
+            <option>الجزائر</option>
+            <option>الجلفة</option>
+            <option>جيجل</option>
+            <option>سطيف</option>
+            <option>سعيدة</option>
+            <option>سكيكدة</option>
+            <option>سيدي بلعباس</option>
+            <option>عنابة</option>
+            <option>قالمة</option>
+            <option>قسنطينة</option>
+            <option>المدية</option>
+            <option>مستغانم</option>
+            <option>المسيلة</option>
+            <option>معسكر</option>
+            <option>ورقلة</option>
+            <option>وهران</option>
+            <option>البيض</option>
+            <option>إليزي</option>
+            <option>برج بوعريريج</option>
+            <option>بومرداس</option>
+            <option>الطارف</option>
+            <option>تندوف</option>
+            <option>تيسمسيلت</option>
+            <option>الوادي</option>
+            <option>خنشلة</option>
+            <option>سوق أهراس</option>
+            <option>تيبازة</option>
+            <option>ميلة</option>
+            <option>عين الدفلى</option>
+            <option>النعامة</option>
+            <option>عين تموشنت</option>
+            <option>غرداية</option>
+            <option>غليزان</option>
+            <option>تيميمون</option>
+            <option>برج باجي مختار</option>
+            <option>أولاد جلال</option>
+            <option>بني عباس</option>
+            <option>إن صالح</option>
+            <option>إن قزام</option>
+            <option>تقرت</option>
+            <option>جانت</option>
+            <option>المغير</option>
+            <option>المنيعة</option>
+          </select>
+        </div>
+
+        <!-- Baladiya -->
+        <div>
+          <label class="block mb-2 font-semibold">البلدية</label>
+          <input type="text" name="baladiya" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Address -->
+        <div>
+          <label class="block mb-2 font-semibold">العنوان</label>
+          <textarea name="address" rows="2" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label class="block mb-2 font-semibold">رقم الهاتف</label>
+          <input type="tel" name="phone" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Quantity -->
+        <div>
+          <label class="block mb-2 font-semibold">الكمية</label>
+          <input type="number" name="quantity" id="quantity" value="1" min="1" required class="w-full border rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Total Price -->
+        <div>
+          <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">1990</span> دج</p>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">
+          إرسال الطلب
+        </button>
+      </form>
+    </div>
+  </main>
+
+  <!-- Script -->
+  <script>
+    const qtyInput = document.getElementById("quantity");
+    const totalPriceEl = document.getElementById("totalPrice");
+
+    function updatePrice() {
+      let qty = parseInt(qtyInput.value) || 1;
+      let total = (qty === 1) ? 1990 : (1990 + (qty - 1) * 1890);
+      totalPriceEl.textContent = total;
+    }
+
+    qtyInput.addEventListener("input", updatePrice);
+    updatePrice();
+
+    // إرسال الطلب إلى تليجرام
+    document.getElementById("orderForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const form = new FormData(this);
+      const message = `
+🛒 طلب جديد - علاقة سكاكين
+👤 الاسم: ${form.get("fullname")}
+📍 الولاية: ${form.get("wilaya")}
+🏘️ البلدية: ${form.get("baladiya")}
+🏠 العنوان: ${form.get("address")}
+📞 الهاتف: ${form.get("phone")}
+🔢 الكمية: ${form.get("quantity")}
+💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
+`;
+
+      const token = "ضع_رمز_البوت_هنا";
+      const chatId = "ضع_chat_id_هنا";
+
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ chat_id: chatId, text: message })
+      })
+      .then(() => {
+        alert("✅ تم إرسال الطلب بنجاح");
+        this.reset();
+        updatePrice();
+      })
+      .catch(() => {
+        alert("❌ حدث خطأ، حاول مجدداً");
+      });
+    });
+  </script>
+
+</body>
+</html>
