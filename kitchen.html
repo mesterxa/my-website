@@ -169,16 +169,16 @@
 💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
 `;
 
-      const token = "ضع_التوكن_هنا";
-      const chatId = "ضع_معرفك_هنا";
+const token = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11Vk>
+      const chatId = "6858411980"; // ضع هنا chat_id الخاص ب>
 
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      fetch(`https://api.telegram.org/bot${token}/sendMessag>
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           chat_id: chatId,
           text: message,
-        })
+        })      
       }).then(() => {
         alert("✅ تم إرسال الطلب بنجاح");
         this.reset();
