@@ -170,7 +170,7 @@
 
       const token = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11VkzZcXz5I ";
       const chatId = "6858411980";
-
+console.log("🔹 إرسال الطلب إلى:", `https://api.telegram.org/bot${token}/sendMessage`);
       fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -182,8 +182,11 @@
         alert("✅ تم إرسال الطلب بنجاح");
         this.reset();
         updatePrice();
-      }).catch(() => {
-        alert("❌ حدث خطأ، حاول مجدداً");
+      })
+        .catch((error) => {
+  console.error("❌ خطأ:", error);
+  alert("❌ فشل الإرسال. تحقق من الكونسول لمعرفة السبب.");
+
       });
     });
   </script>
