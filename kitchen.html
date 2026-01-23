@@ -21,171 +21,119 @@
   <!-- Form Section -->
   <main class="pt-28 pb-20 px-6">
     <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-      
+
       <!-- Product -->
       <div class="text-center mb-8">
         <img src="images/products/pic3.jpg" alt="أدوات المطبخ" class="mx-auto rounded-xl shadow mb-4">
-        <h2 class="text-2xl font-bold mb-2">أدوات المطبخ الخشبية</h2>
-        <p class="text-gray-600">السعر: 1750 دج للقطعة الواحدة</p>
+        <h2 class="text-2xl font-bold mb-2" id="productName">أدوات المطبخ الخشبية</h2>
+        <p class="text-gray-600">السعر: <span id="unitPrice" data-price="1750">1750</span> دج للقطعة الواحدة</p>
         <p class="text-sm text-gray-500">خصم 100 دج لكل قطعة إضافية</p>
       </div>
 
       <!-- Order Form -->
-      <form id="orderForm" class="space-y-6">
-        <!-- Full Name -->
+      <form id="orderForm" class="space-y-6" data-product-name="أدوات المطبخ الخشبية" data-unit-price="1750">
         <div>
           <label class="block mb-2 font-semibold">الاسم واللقب</label>
           <input type="text" name="fullname" required class="w-full border rounded-lg p-3 focus:ring focus:ring-green-200">
         </div>
 
-        <!-- Wilaya -->
         <div>
           <label class="block mb-2 font-semibold">الولاية</label>
           <select name="wilaya" required class="w-full border rounded-lg p-3">
             <option value="">اختر الولاية</option>
-              <option>أدرار</option>
-  <option>الشلف</option>
-  <option>الأغواط</option>
-  <option>أم البواقي</option>
-  <option>باتنة</option>
-  <option>بجاية</option>
-  <option>بسكرة</option>
-  <option>بشار</option>
-  <option>البليدة</option>
-  <option>البويرة</option>
-  <option>تمنراست</option>
-  <option>تبسة</option>
-  <option>تلمسان</option>
-  <option>تيارت</option>
-  <option>تيزي وزو</option>
-  <option>الجزائر</option>
-  <option>الجلفة</option>
-  <option>جيجل</option>
-  <option>سطيف</option>
-  <option>سعيدة</option>
-  <option>سكيكدة</option>
-  <option>سيدي بلعباس</option>
-  <option>عنابة</option>
-  <option>قالمة</option>
-  <option>قسنطينة</option>
-  <option>المدية</option>
-  <option>مستغانم</option>
-  <option>المسيلة</option>
-  <option>معسكر</option>
-  <option>ورقلة</option>
-  <option>وهران</option>
-  <option>البيض</option>
-  <option>إليزي</option>
-  <option>برج بوعريريج</option>
-  <option>بومرداس</option>
-  <option>الطارف</option>
-  <option>تندوف</option>
-  <option>تيسمسيلت</option>
-  <option>الوادي</option>
-  <option>خنشلة</option>
-  <option>سوق أهراس</option>
-  <option>تيبازة</option>
-  <option>ميلة</option>
-  <option>عين الدفلى</option>
-  <option>النعامة</option>
-  <option>عين تموشنت</option>
-  <option>غرداية</option>
-  <option>غليزان</option>
-  <option>تيميمون</option>
-  <option>برج باجي مختار</option>
-  <option>أولاد جلال</option>
-  <option>بني عباس</option>
-  <option>إن صالح</option>
-  <option>إن قزام</option>
-  <option>تقرت</option>
-  <option>جانت</option>
-  <option>المغير</option>
-  <option>المنيعة</option>
-            <!-- يمكنك إضافة باقي الولايات مثلما فعلنا في الصفحات الأخرى -->
+            <!-- جميع الولايات -->
+            <option>أدرار</option>
+            <option>الشلف</option>
+            <option>الأغواط</option>
+            <option>أم البواقي</option>
+            <option>باتنة</option>
+            <option>بجاية</option>
+            <option>بسكرة</option>
+            <option>بشار</option>
+            <option>البليدة</option>
+            <option>البويرة</option>
+            <option>تمنراست</option>
+            <option>تبسة</option>
+            <option>تلمسان</option>
+            <option>تيارت</option>
+            <option>تيزي وزو</option>
+            <option>الجزائر</option>
+            <option>الجلفة</option>
+            <option>جيجل</option>
+            <option>سطيف</option>
+            <option>سعيدة</option>
+            <option>سكيكدة</option>
+            <option>سيدي بلعباس</option>
+            <option>عنابة</option>
+            <option>قالمة</option>
+            <option>قسنطينة</option>
+            <option>المدية</option>
+            <option>مستغانم</option>
+            <option>المسيلة</option>
+            <option>معسكر</option>
+            <option>ورقلة</option>
+            <option>وهران</option>
+            <option>البيض</option>
+            <option>إليزي</option>
+            <option>برج بوعريريج</option>
+            <option>بومرداس</option>
+            <option>الطارف</option>
+            <option>تندوف</option>
+            <option>تيسمسيلت</option>
+            <option>الوادي</option>
+            <option>خنشلة</option>
+            <option>سوق أهراس</option>
+            <option>تيبازة</option>
+            <option>ميلة</option>
+            <option>عين الدفلى</option>
+            <option>النعامة</option>
+            <option>عين تموشنت</option>
+            <option>غرداية</option>
+            <option>غليزان</option>
+            <option>تيميمون</option>
+            <option>برج باجي مختار</option>
+            <option>أولاد جلال</option>
+            <option>بني عباس</option>
+            <option>إن صالح</option>
+            <option>إن قزام</option>
+            <option>تقرت</option>
+            <option>جانت</option>
+            <option>المغير</option>
+            <option>المنيعة</option>
           </select>
         </div>
 
-        <!-- Baladiya -->
         <div>
           <label class="block mb-2 font-semibold">البلدية</label>
           <input type="text" name="baladiya" required class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Address -->
         <div>
           <label class="block mb-2 font-semibold">العنوان</label>
           <textarea name="address" rows="2" required class="w-full border rounded-lg p-3"></textarea>
         </div>
 
-        <!-- Phone -->
         <div>
           <label class="block mb-2 font-semibold">رقم الهاتف</label>
           <input type="tel" name="phone" required class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Quantity -->
         <div>
           <label class="block mb-2 font-semibold">الكمية</label>
           <input type="number" name="quantity" id="quantity" value="1" min="1" class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Total Price -->
         <div>
           <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">1750</span> دج</p>
         </div>
 
-        <!-- Submit -->
         <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">إرسال الطلب</button>
       </form>
     </div>
   </main>
 
-  <script>
-    const qtyInput = document.getElementById("quantity");
-    const totalPriceEl = document.getElementById("totalPrice");
+  <!-- ربط JS مركزي -->
+  <script src="js/sendOrder.js"></script>
 
-    function updatePrice() {
-      let qty = parseInt(qtyInput.value) || 1;
-      let total = (qty === 1) ? 1750 : (1750 + (qty - 1) * 1650);
-      totalPriceEl.textContent = total;
-    }
-
-    qtyInput.addEventListener("input", updatePrice);
-    updatePrice();
-
-    // إرسال إلى تليجرام
-    document.getElementById("orderForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const form = new FormData(this);
-      const message = `
-🥢 طلب جديد - أدوات المطبخ الخشبية
-👤 الاسم: ${form.get("fullname")}
-📍 الولاية: ${form.get("wilaya")}
-🏘️ البلدية: ${form.get("baladiya")}
-🏠 العنوان: ${form.get("address")}
-📞 الهاتف: ${form.get("phone")}
-🔢 الكمية: ${form.get("quantity")}
-💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
-`;
-
-      const token = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11VkzZcXz5I";  
-      const chatId = "6858411980"; // ضع هنا chat_id الخاص بك  
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {  
-        method: "POST",  
-        headers: { "Content-Type": "application/json" },  
-        body: JSON.stringify({  
-          chat_id: chatId,  
-          text: message,  
-        })  
-      }).then(() => {  
-        alert("✅ تم إرسال الطلب بنجاح");  
-        this.reset();  
-        updatePrice();  
-      }).catch(() => {  
-        alert("❌ حدث خطأ، حاول مجدداً");  
-      });  
-    });  
-  </script>  </body>  
-</html>  
+</body>
+</html>
