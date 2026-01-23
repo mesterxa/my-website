@@ -21,28 +21,27 @@
   <!-- Form Section -->
   <main class="pt-28 pb-20 px-6">
     <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-      
+
       <!-- Product -->
       <div class="text-center mb-8">
         <img src="images/products/pic2.jpg" alt="علاقة ملابس" class="mx-auto rounded-xl shadow mb-4">
-        <h2 class="text-2xl font-bold mb-2">علاقة ملابس عصرية</h2>
-        <p class="text-gray-600">السعر: 1450 دج للقطعة الواحدة</p>
+        <h2 class="text-2xl font-bold mb-2" id="productName">علاقة ملابس عصرية</h2>
+        <p class="text-gray-600">السعر: <span id="unitPrice" data-price="1450">1450</span> دج للقطعة الواحدة</p>
         <p class="text-sm text-gray-500">خصم 50 دج لكل قطعة إضافية</p>
       </div>
 
       <!-- Order Form -->
-      <form id="orderForm" class="space-y-6">
-        <!-- Full Name -->
+      <form id="orderForm" class="space-y-6" data-product-name="علاقة ملابس عصرية" data-unit-price="1450">
         <div>
           <label class="block mb-2 font-semibold">الاسم واللقب</label>
           <input type="text" name="fullname" required class="w-full border rounded-lg p-3 focus:ring focus:ring-blue-200">
         </div>
 
-        <!-- Wilaya -->
         <div>
           <label class="block mb-2 font-semibold">الولاية</label>
           <select name="wilaya" required class="w-full border rounded-lg p-3">
             <option value="">اختر الولاية</option>
+            <!-- جميع الولايات هنا -->
             <option>أدرار</option>
             <option>الشلف</option>
             <option>الأغواط</option>
@@ -104,87 +103,37 @@
           </select>
         </div>
 
-        <!-- Baladiya -->
         <div>
           <label class="block mb-2 font-semibold">البلدية</label>
           <input type="text" name="baladiya" required class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Address -->
         <div>
           <label class="block mb-2 font-semibold">العنوان</label>
           <textarea name="address" rows="2" required class="w-full border rounded-lg p-3"></textarea>
         </div>
 
-        <!-- Phone -->
         <div>
           <label class="block mb-2 font-semibold">رقم الهاتف</label>
           <input type="tel" name="phone" required class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Quantity -->
         <div>
           <label class="block mb-2 font-semibold">الكمية</label>
           <input type="number" name="quantity" id="quantity" value="1" min="1" class="w-full border rounded-lg p-3">
         </div>
 
-        <!-- Total Price -->
         <div>
           <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">1450</span> دج</p>
         </div>
 
-        <!-- Submit -->
         <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition">إرسال الطلب</button>
       </form>
     </div>
   </main>
 
-  <script>
-    const qtyInput = document.getElementById("quantity");
-    const totalPriceEl = document.getElementById("totalPrice");
+  <!-- ربط JS مركزي -->
+  <script src="js/sendOrder.js"></script>
 
-    function updatePrice() {
-      let qty = parseInt(qtyInput.value) || 1;
-      let total = (qty === 1) ? 1450 : (1450 + (qty - 1) * 1400);
-      totalPriceEl.textContent = total;
-    }
-
-    qtyInput.addEventListener("input", updatePrice);
-    updatePrice();
-
-    // إرسال إلى تليجرام
-    document.getElementById("orderForm").addEventListener("submit", function(e) {
-      e.preventDefault();
-
-      const form = new FormData(this);
-      const message = `
-🛒 طلب جديد - علاقة ملابس
-👤 الاسم: ${form.get("fullname")}
-📍 الولاية: ${form.get("wilaya")}
-🏘️ البلدية: ${form.get("baladiya")}
-🏠 العنوان: ${form.get("address")}
-📞 الهاتف: ${form.get("phone")}
-🔢 الكمية: ${form.get("quantity")}
-💰 السعر الإجمالي: ${totalPriceEl.textContent} دج
-`;
-
-      const token = "8176513159:AAHIOJEdKK0KN9xUwgHJV4em11VkzZcXz5I";  
-      const chatId = "6858411980"; // ضع هنا chat_id الخاص بك  
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {  
-        method: "POST",  
-        headers: { "Content-Type": "application/json" },  
-        body: JSON.stringify({  
-          chat_id: chatId,  
-          text: message,  
-        })  
-      }).then(() => {  
-        alert("✅ تم إرسال الطلب بنجاح");  
-        this.reset();  
-        updatePrice();  
-      }).catch(() => {  
-        alert("❌ حدث خطأ، حاول مجدداً");  
-      });  
-    });  
-  </script>  </body>  
-</html>  
+</body>
+</html>
