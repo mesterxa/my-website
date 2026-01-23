@@ -21,27 +21,28 @@
   <!-- Form Section -->
   <main class="pt-28 pb-20 px-6">
     <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-lg p-8">
-
+      
       <!-- Product -->
       <div class="text-center mb-8">
         <img src="images/products/pic3.jpg" alt="أدوات المطبخ" class="mx-auto rounded-xl shadow mb-4">
-        <h2 class="text-2xl font-bold mb-2" id="productName">أدوات المطبخ الخشبية</h2>
-        <p class="text-gray-600">السعر: <span id="unitPrice" data-price="1750">1750</span> دج للقطعة الواحدة</p>
+        <h2 class="text-2xl font-bold mb-2">أدوات المطبخ الخشبية</h2>
+        <p class="text-gray-600">السعر: 1750 دج للقطعة الواحدة</p>
         <p class="text-sm text-gray-500">خصم 100 دج لكل قطعة إضافية</p>
       </div>
 
       <!-- Order Form -->
       <form id="orderForm" class="space-y-6" data-product-name="أدوات المطبخ الخشبية" data-unit-price="1750">
+        <!-- Full Name -->
         <div>
           <label class="block mb-2 font-semibold">الاسم واللقب</label>
           <input type="text" name="fullname" required class="w-full border rounded-lg p-3 focus:ring focus:ring-green-200">
         </div>
 
+        <!-- Wilaya -->
         <div>
           <label class="block mb-2 font-semibold">الولاية</label>
           <select name="wilaya" required class="w-full border rounded-lg p-3">
             <option value="">اختر الولاية</option>
-            <!-- جميع الولايات -->
             <option>أدرار</option>
             <option>الشلف</option>
             <option>الأغواط</option>
@@ -103,37 +104,41 @@
           </select>
         </div>
 
+        <!-- Baladiya -->
         <div>
           <label class="block mb-2 font-semibold">البلدية</label>
           <input type="text" name="baladiya" required class="w-full border rounded-lg p-3">
         </div>
 
+        <!-- Address -->
         <div>
           <label class="block mb-2 font-semibold">العنوان</label>
           <textarea name="address" rows="2" required class="w-full border rounded-lg p-3"></textarea>
         </div>
 
+        <!-- Phone -->
         <div>
           <label class="block mb-2 font-semibold">رقم الهاتف</label>
           <input type="tel" name="phone" required class="w-full border rounded-lg p-3">
         </div>
 
+        <!-- Quantity -->
         <div>
           <label class="block mb-2 font-semibold">الكمية</label>
           <input type="number" name="quantity" id="quantity" value="1" min="1" class="w-full border rounded-lg p-3">
         </div>
 
+        <!-- Total Price -->
         <div>
           <p class="font-bold text-lg">السعر الإجمالي: <span id="totalPrice">1750</span> دج</p>
         </div>
 
+        <!-- Submit -->
         <button type="submit" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-700 transition">إرسال الطلب</button>
       </form>
     </div>
   </main>
 
-  <!-- ربط JS مركزي -->
-  <script src="js/sendOrder.js"></script>
-
+  <script src="sendOrder.js"></script>
 </body>
 </html>
